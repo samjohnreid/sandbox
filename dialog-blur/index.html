@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Dialog & Blur</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <h1>Random dummy text to see what the blur filter looks like over content</h1>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nulla justo, maximus at arcu sit amet, elementum imperdiet dolor. Donec non eros lorem. Proin molestie ac mauris ut cursus. Nullam vitae ultrices ipsum. Integer in sapien a augue gravida volutpat. Donec ut tempus tellus. Proin scelerisque lorem ex, ut efficitur odio congue eget. Aliquam ipsum eros, faucibus quis venenatis nec, tempor non ante. Vestibulum lobortis id lectus vitae sodales. Nulla nec eleifend arcu, vitae vulputate odio. Praesent diam ex, placerat eu odio sed, tempus semper mauris. Nulla et rhoncus velit, et volutpat est. Nunc gravida libero in nibh pulvinar, eget tempor elit interdum. Sed efficitur nisl et diam finibus, eleifend commodo quam viverra.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nulla justo, maximus at arcu sit amet, elementum imperdiet dolor. Donec non eros lorem. Proin molestie ac mauris ut cursus. Nullam vitae ultrices ipsum. Integer in sapien a augue gravida volutpat. Donec ut tempus tellus. Proin scelerisque lorem ex, ut efficitur odio congue eget. Aliquam ipsum eros, faucibus quis venenatis nec, tempor non ante. Vestibulum lobortis id lectus vitae sodales. Nulla nec eleifend arcu, vitae vulputate odio. Praesent diam ex, placerat eu odio sed, tempus semper mauris. Nulla et rhoncus velit, et volutpat est. Nunc gravida libero in nibh pulvinar, eget tempor elit interdum. Sed efficitur nisl et diam finibus, eleifend commodo quam viverra.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nulla justo, maximus at arcu sit amet, elementum imperdiet dolor. Donec non eros lorem. Proin molestie ac mauris ut cursus. Nullam vitae ultrices ipsum. Integer in sapien a augue gravida volutpat. Donec ut tempus tellus. Proin scelerisque lorem ex, ut efficitur odio congue eget. Aliquam ipsum eros, faucibus quis venenatis nec, tempor non ante. Vestibulum lobortis id lectus vitae sodales. Nulla nec eleifend arcu, vitae vulputate odio. Praesent diam ex, placerat eu odio sed, tempus semper mauris. Nulla et rhoncus velit, et volutpat est. Nunc gravida libero in nibh pulvinar, eget tempor elit interdum. Sed efficitur nisl et diam finibus, eleifend commodo quam viverra.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nulla justo, maximus at arcu sit amet, elementum imperdiet dolor. Donec non eros lorem. Proin molestie ac mauris ut cursus. Nullam vitae ultrices ipsum. Integer in sapien a augue gravida volutpat. Donec ut tempus tellus. Proin scelerisque lorem ex, ut efficitur odio congue eget. Aliquam ipsum eros, faucibus quis venenatis nec, tempor non ante. Vestibulum lobortis id lectus vitae sodales. Nulla nec eleifend arcu, vitae vulputate odio. Praesent diam ex, placerat eu odio sed, tempus semper mauris. Nulla et rhoncus velit, et volutpat est. Nunc gravida libero in nibh pulvinar, eget tempor elit interdum. Sed efficitur nisl et diam finibus, eleifend commodo quam viverra.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nulla justo, maximus at arcu sit amet, elementum imperdiet dolor. Donec non eros lorem. Proin molestie ac mauris ut cursus. Nullam vitae ultrices ipsum. Integer in sapien a augue gravida volutpat. Donec ut tempus tellus. Proin scelerisque lorem ex, ut efficitur odio congue eget. Aliquam ipsum eros, faucibus quis venenatis nec, tempor non ante. Vestibulum lobortis id lectus vitae sodales. Nulla nec eleifend arcu, vitae vulputate odio. Praesent diam ex, placerat eu odio sed, tempus semper mauris. Nulla et rhoncus velit, et volutpat est. Nunc gravida libero in nibh pulvinar, eget tempor elit interdum. Sed efficitur nisl et diam finibus, eleifend commodo quam viverra.</p>
+  
+  <dialog id="samdialog">
+    I *was* closed.
+    <button onclick="window.samdialog.close()">Close it.</button>
+    <p>putting <a href="">links</a> and stuff in here to see if it traps focus for a11y...</p>
+    <p>spoiler: <a href="">it</a> doesn't :(</p>
+    <button onclick="window.samdialog2.showModal()">Or open another modal inside this modal!</button>
+  </dialog>
+
+  <dialog id="samdialog2">hello, i'm a cheeky nested modal!</dialog>
+
+  <button onclick="window.samdialog.showModal()">Mess with the dialogs!</button>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

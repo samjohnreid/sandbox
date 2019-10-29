@@ -1,0 +1,11 @@
+body {
+  background: url(../prague.jpg);
+}
+
+dialog {
+  border: 1px dotted red;
+}
+
+dialog::backdrop {
+  backdrop-filter: blur(3px);
+}
