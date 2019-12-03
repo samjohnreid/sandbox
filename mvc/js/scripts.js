@@ -1,3 +1,5 @@
+// ******************** MODEL ********************
+
 class Model {
   constructor() {
     // The state of the model, an array of todo objects, prepopulated with some data
@@ -19,22 +21,33 @@ class Model {
 
   // Map through all todos, and replace the text of the todo with the specified id
   editTodo(id, updatedText) {
-    this.todos = this.todos.map(todo => {
-      todo.id === id ? {id: todo.id, text: updatedText, complete: todo.complete} : todo;
-    });
+    this.todos = this.todos.map(todo =>
+      todo.id === id ? {id: todo.id, text: updatedText, complete: todo.complete} : todo
+    );
   }
 
   // Filter a todo out of the array by id
   deleteTodo(id) {
-    this.todos = this.todos.filter(todo => {
-      todo.id !== id;
-    });
+    this.todos = this.todos.filter(todo =>
+      todo.id !== id
+    );
+  }
+
+  // Flip the complete boolean on the specified todo
+  toggleTodo(id) {
+    this.todos = this.todos.map(todo =>
+      todo.id === id ? {id: todo.id, text: todo.text, complete: !todo.complete} : todo
+    );
   }
 }
+
+// ******************** VIEW ********************
 
 class View {
   constructor() {}
 }
+
+// ******************** CONTROLLER ********************
 
 class Controller {
   constructor(model, view) {
@@ -44,3 +57,26 @@ class Controller {
 }
 
 const app = new Controller(new Model(), new View());
+
+
+
+// ********************  ********************
+
+// console.log(app.model.todos);
+
+// console.log(app.model.todos[0].text);
+// console.log(app.model.todos[1].text);
+
+// app.model.addTodo('Take a nap');
+
+// console.log(app.model.todos[2].text);
+
+// app.model.addTodo('Weeeeeeeeeee!!!');
+
+// console.log(app.model.todos[3].text);
+
+// app.model.editTodo(1, 'Super awesome!!!!!')
+
+// console.log(app.model.todos);
+
+// console.log(app.model.todos[3].text);
