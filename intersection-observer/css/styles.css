@@ -4,3 +4,8 @@
 
 .long-div {
   padding: 1500px 0; }
+
+.sticky-sentinal {
+  height: 100px;
+  background: rebeccapurple;
+  width: 100%; }

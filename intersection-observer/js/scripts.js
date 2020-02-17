@@ -1,11 +1,11 @@
-const observableImg = document.querySelector('.pickle-ping');
+const stickySentinal = document.querySelector('.sticky-sentinal');
 
-observer = new IntersectionObserver((entry, observer) => {
-  if (entry[0].intersectionRatio > 0) {
-    console.log('I\'m in the viewport!');
+observer = new IntersectionObserver((entry) => {
+  if (!entry[0].isIntersecting && entry[0].boundingClientRect.top < 0) {
+    console.log('add class');
   } else {
-    console.log('I\'m NOT in the viewport :(');
+    console.log('remove class');
   }
 });
 
-observer.observe(observableImg);
+observer.observe(stickySentinal);
