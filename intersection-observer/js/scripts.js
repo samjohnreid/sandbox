@@ -1,4 +1,4 @@
-const stickySentinal = document.querySelector('.sticky-sentinal');
+const stickySentinel = document.querySelector('.sticky-sentinel');
 
 observer = new IntersectionObserver((entry) => {
   if (!entry[0].isIntersecting && entry[0].boundingClientRect.top < 0) {
@@ -8,4 +8,4 @@ observer = new IntersectionObserver((entry) => {
   }
 });
 
-observer.observe(stickySentinal);
+observer.observe(stickySentinel);
