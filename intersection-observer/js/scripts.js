@@ -1,4 +1,3 @@
-// const stickySentinel = document.querySelector('.sticky-sentinel');
 const stickyPickle = document.querySelector('.pickle-ping');
 
 const options = {
@@ -6,8 +5,6 @@ const options = {
 };
 
 observer = new IntersectionObserver((entry) => {
-  // if (!entry[0].isIntersecting && entry[0].boundingClientRect.top < 0) {
-  // console.log(entry[0]);
   if (entry[0].isIntersecting) {
     console.log('add class');
   } else {
