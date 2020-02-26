@@ -1,4 +1,4 @@
-const stickyPickle = document.querySelector('.pickle-ping');
+const stickyPickle = document.querySelector('.pickle-png');
 
 const options = {
   threshold: 0
