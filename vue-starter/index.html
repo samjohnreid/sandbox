@@ -11,10 +11,25 @@
 <body>
   
   <div id="app">
-    <input v-on:input="changeTitle">
-    <p>{{ title }}</p>
+    
+    <p>VueJS is pretty cool - {{ YOUR_NAME }} ({{ AGE }})</p>
+
+    <p>My age, multiplied by three: {{ AGE * 3 }}</p>
+
+    <p>Here is a funciton that outputs a random float: {{ randomFloat() }}</p>
+
+    <div>
+      <img style="width:100px;height:100px" v-bind:src="image">
+    </div>
+
+    <div>
+      <input type="text" v-bind:value="YOUR_NAME">
+  </div>
+
   </div>
 
   <script src="js/scripts.js"></script>
 </body>
 </html>
+
+
