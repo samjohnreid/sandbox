@@ -1,16 +1,28 @@
 new Vue({
   el: '#app',
   data: {
-    YOUR_NAME: 'Samuel Reid',
-    AGE: 41,
-    image: 'https://scene7.zumiez.com/is/image/zumiez/Zoom_PDP/Primitive-x-Rick-and-Morty-Pickle-Rick-Sticker-_309256-front-US.jpg'
+    counter: 0,
+    x: 0,
+    y: 0,
+    value: 'initial value'
   },
   methods: {
-    ageMultiplier: function() {
-      return this.AGE * 3;
+    increase: function(val) {
+      this.counter+= val;
+      console.log(event);
     },
-    randomFloat: function() {
-      return Math.random();
+    updateCoordinates: function(event) {
+      this.x = event.clientX;
+      this.y = event.clientY;
+    },
+    deadSpot: function(zevent) {
+      zevent.stopPropagation();
+    },
+    alert: function() {
+      console.log('weeeee key up, bro!!!');
+    },
+    updateValue: function(event) {
+      this.value = event.target.value;
     }
   }
 });
