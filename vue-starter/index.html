@@ -12,18 +12,8 @@
   
   <div id="app">
     
-    <a href="" v-on:click.prevent="increase(10)">Click Me!</a>
-    <p>{{ counter }}</p>
-    <p style="background: #e5e5e5; padding: 50px;" v-on:mousemove="updateCoordinates">
-      Coordinates: {{ x }} / {{ y }}
-      <span style="background: red; padding: 20px;" v-on:mousemove.stop="">DEAD SPOT</span>
-    </p>
-    <div>
-      <input type="text" v-on:keyup.enter.space="alert" />
-    </div>
-    <hr>
-    <p>super dynamic value: {{ value }}</p>
-    <p><input type="text" v-on:keyup.enter="updateValue($event); counter+=10" /></p>
+    <input type="text" v-model="name" />
+    <p>{{ name }}</p>
 
    </div> 
 
