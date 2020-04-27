@@ -33,6 +33,22 @@ body {
   margin: 10px;
   position: relative;
   width: 350px;
+
+  &__indicator {
+    align-items: center;
+    background: #e5e5e5;
+    color: #fff;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: bolder;
+    height: 24px;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 24px;
+  }
 }
 
 @import 'dots-01';
