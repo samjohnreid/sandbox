@@ -23,35 +23,97 @@ body {
     0 8px 8px rgba(0,0,0,0.15)
   ;
   display: flex;
-  height: 300px;
+  height: 200px;
   margin: 0 auto;
   position: relative;
   width: 550px;
 
-  &__dot {
-    
-    animation: dotSlide;
-    animation-duration: 1s;
-    animation-timing-function: '';
-    animation-delay: '';
-    animation-iteration-count: '';
-    animation-direction: '';
-    animation-fill-mode: '';
-    animation-play-state: '';
+  & + .dots {
+    margin-top: 30px;
+  }
 
+  &__dot {
     background: #e5e5e5;
     border-radius: 50%;
     height: 110px;
     position: absolute;
     width: 110px;
   }
+
+  &__dot-wrapper {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
 }
 
-@keyframes dotSlide {
+.dots--01 {
+
+  .dots__dot {
+    animation-name: dotSlide01;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+  }
+}
+
+.dots--02 {
+
+  .dots__dot-wrapper {
+    animation-name: dotSlide02;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+  }
+}
+
+.dots--03 {
+
+  .dots__dot-wrapper {
+    animation-name: dotSlide03;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+  }
+}
+
+@keyframes dotSlide01 {
   0% {
     left: 0;
   }
   100% {
-    left: calc(100% - 110px);
+    left: 100%;
+  }
+}
+
+@keyframes dotSlide02 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes dotSlide03 {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(100%, 0, 0);
   }
 }
