@@ -1,0 +1,39 @@
+.dots-09 {
+
+  .dot-typing {
+    position: relative;
+    left: -9999px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: var(--color-blue);
+    color: var(--color-blue);
+    box-shadow: 9984px 0 0 0 var(--color-blue), 9999px 0 0 0 var(--color-blue), 10014px 0 0 0 var(--color-blue);
+    animation: dotTyping 1.5s infinite linear;
+  }
+  
+  @keyframes dotTyping {
+    0% {
+      box-shadow: 9984px 0 0 0 var(--color-blue), 9999px 0 0 0 var(--color-blue), 10014px 0 0 0 var(--color-blue);
+    }
+    16.667% {
+      box-shadow: 9984px -10px 0 0 var(--color-blue), 9999px 0 0 0 var(--color-blue), 10014px 0 0 0 var(--color-blue);
+    }
+    33.333% {
+      box-shadow: 9984px 0 0 0 var(--color-blue), 9999px 0 0 0 var(--color-blue), 10014px 0 0 0 var(--color-blue);
+    }
+    50% {
+      box-shadow: 9984px 0 0 0 var(--color-blue), 9999px -10px 0 0 var(--color-blue), 10014px 0 0 0 var(--color-blue);
+    }
+    66.667% {
+      box-shadow: 9984px 0 0 0 var(--color-blue), 9999px 0 0 0 var(--color-blue), 10014px 0 0 0 var(--color-blue);
+    }
+    83.333% {
+      box-shadow: 9984px 0 0 0 var(--color-blue), 9999px 0 0 0 var(--color-blue), 10014px -10px 0 0 var(--color-blue);
+    }
+    100% {
+      box-shadow: 9984px 0 0 0 var(--color-blue), 9999px 0 0 0 var(--color-blue), 10014px 0 0 0 var(--color-blue);
+    }
+  }
+
+}

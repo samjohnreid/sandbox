@@ -1,0 +1,53 @@
+.dots-10 .dot-windmill {
+  position: relative;
+  top: -10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: var(--color-green);
+  color: var(--color-green);
+  transform-origin: 5px 15px;
+  animation: dotWindmill 2s infinite linear; }
+
+.dots-10 .dot-windmill::before, .dots-10 .dot-windmill::after {
+  content: '';
+  display: inline-block;
+  position: absolute; }
+
+.dots-10 .dot-windmill::before {
+  left: -8.66px;
+  top: 15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: var(--color-blue);
+  color: var(--color-blue);
+  animation: dotWindmillBefore 2s infinite linear; }
+
+.dots-10 .dot-windmill::after {
+  left: 8.66px;
+  top: 15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: var(--color-teal);
+  color: var(--color-teal);
+  animation: dotWindmillAfter 2s infinite linear; }
+
+@keyframes dotWindmill {
+  0% {
+    transform: rotateZ(0deg) translate3d(0, 0, 0); }
+  100% {
+    transform: rotateZ(720deg) translate3d(0, 0, 0); } }
+
+@keyframes dotWindmillBefore {
+  0% {
+    transform: rotateZ(0deg) translate3d(0, 0, 0); }
+  100% {
+    transform: rotateZ(720deg) translate3d(0, 0, 0); } }
+
+@keyframes dotWindmillAfter {
+  0% {
+    transform: rotateZ(0deg) translate3d(0, 0, 0); }
+  100% {
+    transform: rotateZ(720deg) translate3d(0, 0, 0); } }

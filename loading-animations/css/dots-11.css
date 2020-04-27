@@ -1,0 +1,65 @@
+.dots-11 .dot-falling {
+  position: relative;
+  left: -9999px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: var(--color-green);
+  color: var(--color-green);
+  box-shadow: 9999px 0 0 0 #9880ff;
+  animation: dotFalling 1s infinite linear;
+  animation-delay: .1s; }
+
+.dots-11 .dot-falling::before, .dots-11 .dot-falling::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0; }
+
+.dots-11 .dot-falling::before {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: var(--color-blue);
+  color: var(--color-blue);
+  animation: dotFallingBefore 1s infinite linear;
+  animation-delay: 0s; }
+
+.dots-11 .dot-falling::after {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: var(--color-teal);
+  color: var(--color-teal);
+  animation: dotFallingAfter 1s infinite linear;
+  animation-delay: .2s; }
+
+@keyframes dotFalling {
+  0% {
+    box-shadow: 9999px -15px 0 0 rgba(152, 128, 255, 0); }
+  25%,
+  50%,
+  75% {
+    box-shadow: 9999px 0 0 0 var(--color-green); }
+  100% {
+    box-shadow: 9999px 15px 0 0 rgba(152, 128, 255, 0); } }
+
+@keyframes dotFallingBefore {
+  0% {
+    box-shadow: 9984px -15px 0 0 rgba(152, 128, 255, 0); }
+  25%,
+  50%,
+  75% {
+    box-shadow: 9984px 0 0 0 var(--color-blue); }
+  100% {
+    box-shadow: 9984px 15px 0 0 rgba(152, 128, 255, 0); } }
+
+@keyframes dotFallingAfter {
+  0% {
+    box-shadow: 10014px -15px 0 0 rgba(152, 128, 255, 0); }
+  25%,
+  50%,
+  75% {
+    box-shadow: 10014px 0 0 0 var(--color-teal); }
+  100% {
+    box-shadow: 10014px 15px 0 0 rgba(152, 128, 255, 0); } }

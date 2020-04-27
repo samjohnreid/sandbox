@@ -5,8 +5,8 @@
     width: 10px;
     height: 10px;
     border-radius: 5px;
-    background-color: #9880ff;
-    color: #9880ff;
+    background-color: var(--color-green);
+    color: var(--color-green);
     animation: dotFlashing 1s infinite linear alternate;
     animation-delay: .5s;
   }
@@ -23,9 +23,9 @@
     width: 10px;
     height: 10px;
     border-radius: 5px;
-    background-color: #9880ff;
-    color: #9880ff;
-    animation: dotFlashing 1s infinite alternate;
+    background-color: var(--color-blue);
+    color: var(--color-blue);
+    animation: dotFlashingBefore 1s infinite alternate;
     animation-delay: 0s;
   }
   
@@ -34,19 +34,39 @@
     width: 10px;
     height: 10px;
     border-radius: 5px;
-    background-color: #9880ff;
-    color: #9880ff;
-    animation: dotFlashing 1s infinite alternate;
+    background-color: var(--color-teal);
+    color: var(--color-teal);
+    animation: dotFlashingAfter 1s infinite alternate;
     animation-delay: 1s;
   }
   
   @keyframes dotFlashing {
     0% {
-      background-color: #9880ff;
+      background-color: var(--color-green);
     }
     50%,
     100% {
-      background-color: #ebe6ff;
+      background-color: #f2f4f4;
+    }
+  }
+
+  @keyframes dotFlashingBefore {
+    0% {
+      background-color: var(--color-blue);
+    }
+    50%,
+    100% {
+      background-color: #f2f4f4;
+    }
+  }
+
+  @keyframes dotFlashingAfter {
+    0% {
+      background-color: var(--color-teal);
+    }
+    50%,
+    100% {
+      background-color: #f2f4f4;
     }
   }
 
