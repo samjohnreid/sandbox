@@ -9,39 +9,34 @@
 html,
 body {
   height: 100%;
-  margin: 0; }
+  margin: 0;
+  background: #e5e5e5; }
 
 .dots {
-  align-items: center;
   background: #fff;
-  display: flex;
-  height: 100%;
-  margin: 0 auto;
-  position: relative;
-  width: 660px; }
-  .dots + .dots {
-    margin-top: 30px; }
+  display: inline-flex;
+  flex-direction: column;
+  padding: 36px 54px; }
+  .dots__label {
+    margin-bottom: 24px; }
+  .dots__container {
+    align-self: center;
+    height: 24px;
+    width: 128px; }
   .dots__dot {
-    background: #e5e5e5;
+    animation: dotSlide01 1.2s linear infinite;
     border-radius: 50%;
-    height: 145px;
+    height: 24px;
     position: absolute;
-    width: 145px; }
+    width: 24px; }
     .dots__dot.dots__dot--01 {
       background: var(--color-blue); }
     .dots__dot.dots__dot--02 {
-      background: var(--color-teal); }
+      background: var(--color-teal);
+      animation-delay: -0.4s; }
     .dots__dot.dots__dot--03 {
-      background: var(--color-green); }
-
-.dots--01 .dots__dot--01 {
-  animation: dotSlide01 1.5s linear 0s infinite; }
-
-.dots--01 .dots__dot--02 {
-  animation: dotSlide01 1.5s linear -0.5s infinite; }
-
-.dots--01 .dots__dot--03 {
-  animation: dotSlide01 1.5s linear -1s infinite; }
+      background: var(--color-green);
+      animation-delay: -0.8s; }
 
 @keyframes dotSlide01 {
   0% {
@@ -49,10 +44,10 @@ body {
     transform: translate3d(0, 0, 0) scale3d(0.8, 0.8, 1); }
   20% {
     opacity: 1;
-    transform: translate3d(103px, 0, 0) scale3d(1, 1, 1); }
+    transform: translate3d(21px, 0, 0) scale3d(1, 1, 1); }
   80% {
     opacity: 1;
-    transform: translate3d(412px, 0, 0) scale3d(1, 1, 1); }
+    transform: translate3d(83px, 0, 0) scale3d(1, 1, 1); }
   100% {
     opacity: 0;
-    transform: translate3d(515px, 0, 0) scale3d(0.8, 0.8, 1); } }
+    transform: translateX(104px) scale3d(0.8, 0.8, 1); } }
