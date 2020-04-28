@@ -60,18 +60,18 @@ body {
 @keyframes dotSlide01 {
   0% {
     opacity: 0;
-    transform: translate3d(0, 0, 0) scale3d(0.8, 0.8, 1);
+    transform: scale(0.8);
   }
   20% {
     opacity: 1;
-    transform: translate3d(21px, 0, 0) scale3d(1, 1, 1);
+    transform: translateX(21px) scale(1);
   }
   80% {
     opacity: 1;
-    transform: translate3d(83px, 0, 0) scale3d(1, 1, 1);
+    transform: translateX(83px);
   }
   100% {
     opacity: 0;
-    transform: translateX(104px) scale3d(0.8, 0.8, 1);
+    transform: translateX(104px) scale(0.8);
   }
 }
