@@ -12,8 +12,12 @@
   
   <div id="app">
     
-    <input type="text" v-model="name" />
-    <p>{{ name }}</p>
+    <div>
+      <p>Current Value: {{ value }}</p>
+      <button @click="value += 5">Add 5</button>
+      <button @click="value += 1">Add 1</button>
+      <p>{{ result }}</p>
+  </div>
 
    </div> 
 
