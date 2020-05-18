@@ -1,7 +1,10 @@
 new Vue({
   el: '#app',
   data: {
-    value: 0
+    value: 0,
+    attachRed: false,
+    color: 'red',
+    width: 200
   },
   computed: {
     result() {
@@ -10,6 +13,12 @@ new Vue({
       } else {
         return 'done!';
       }
+    },
+    myStyle: function() {
+      return {
+        backgroundColor: this.color,
+        width: this.width + 'px'
+      };
     }
   },
   watch: {
