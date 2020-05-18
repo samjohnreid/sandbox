@@ -39,3 +39,16 @@ const objectFound = someJusticeLeague.find((el) => {
 });
 
 console.log(objectFound);
+
+console.log('-------------------------------');
+
+const family = {
+  dad: 'Sam',
+  mom: 'Bianca',
+  kid: 'Dommers',
+  pet: 'Archer'
+};
+
+const { dad: daddy, mom, kid, pet } = family;
+
+console.log(daddy);
