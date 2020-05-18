@@ -58,3 +58,10 @@ const cities = ['London', 'New York', 'Tokyo', 'Shanghai', 'Mumbai'];
 const [ england, usa, japan, china, india ] = cities;
 
 console.log(india);
+
+const foods = ['Pizza', 'Tacos', 'Hamburgers'];
+const otherFoods = ['Sushi', 'Curry', 'Wings'];
+
+const allTheFoods = [...foods, ...otherFoods];
+
+console.log(allTheFoods);
