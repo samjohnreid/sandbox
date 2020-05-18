@@ -52,3 +52,9 @@ const family = {
 const { dad: daddy, mom, kid, pet } = family;
 
 console.log(daddy);
+
+const cities = ['London', 'New York', 'Tokyo', 'Shanghai', 'Mumbai'];
+
+const [ england, usa, japan, china, india ] = cities;
+
+console.log(india);
