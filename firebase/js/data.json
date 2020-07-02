@@ -1,0 +1,19 @@
+{
+  "movies": [
+    {
+      "title": "Goodfellas",
+      "year": 1990,
+      "director": "Martin Scorsese"
+    },
+    {
+      "title": "Star Wars",
+      "year": 1977,
+      "director": "George Lucas"
+    },
+    {
+      "title": "Blade Runner",
+      "year": 1982,
+      "director": "Ridley Scott"
+    }
+  ]
+}
