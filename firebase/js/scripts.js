@@ -5,7 +5,22 @@ const database = firebase.database();
 const movies = database.ref('movies');
 
 movies.once('value', function(snapshot) {
-  console.log(snapshot.val());
+  //console.log(snapshot.val());
+  snapshot.forEach(function(childSnapshot) {
+    console.log('Key: ', childSnapshot.key, ' | ', 'Title: ', childSnapshot.val().title, ', ', childSnapshot.val().director);
+  });
+}, function(error) {
+  console.log('Error: ', error.code);
+});
+
+// Get directors
+const directors = database.ref('directors');
+
+directors.once('value', function(snapshot) {
+  //console.log(snapshot.val());
+  snapshot.forEach(function(childSnapshot) {
+    //console.log(childSnapshot.val().name);
+  });
 }, function(error) {
   console.log('Error: ', error.code);
 });
@@ -32,3 +47,8 @@ function addMovieBtnClicked() {
 
 const addMovieBtn = document.querySelector('.add-movie__btn');
 addMovieBtn.addEventListener('click', addMovieBtnClicked);
+
+// **********************************
+
+
+const moviesList = document.querySelector('.movies');

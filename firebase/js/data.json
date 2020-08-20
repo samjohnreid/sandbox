@@ -1,19 +1,60 @@
 {
-  "movies": [
-    {
-      "title": "Goodfellas",
-      "year": 1990,
-      "director": "Martin Scorsese"
+  "movies" : {
+    "-MC59rPMYsvQg77jmJLW" : {
+      "director" : "0",
+      "title" : "Top Secret",
+      "slug" : "top-secret",
+      "year" : "1984"
     },
-    {
-      "title": "Star Wars",
-      "year": 1977,
-      "director": "George Lucas"
+    "-MC5C9gvDx5bBNMoZGVf" : {
+      "director" : "1",
+      "title" : "Raiders of the Lost Ark",
+      "slug" : "raiders-of-the-lost-ark",
+      "year" : "1981"
     },
-    {
-      "title": "Blade Runner",
-      "year": 1982,
-      "director": "Ridley Scott"
+    "-MCKKls3R3sWBCpbhtlF" : {
+      "director" : "2",
+      "title" : "The Shining",
+      "slug" : "the-shining",
+      "year" : "1980"
+    },
+    "-MCKOmy2UxDhAGnGoH4H" : {
+      "director" : "3",
+      "title" : "Goodfellas",
+      "slug" : "goodfellas",
+      "year" : "1990"
+    },
+    "-MCKOqb6FcCEEOddXU9t" : {
+      "director" : "4",
+      "title" : "Star Wars",
+      "slug" : "star-wars",
+      "year" : "1977"
+    },
+    "-MCKOtvoAqosEQ9QZOsP" : {
+      "director" : "5",
+      "title" : "Blade Runner",
+      "slug" : "blade-runner",
+      "year" : "1982"
     }
-  ]
+  },
+  "directors": {
+    "0": {
+      "name": "David Zucker, Jim Abrahams, Jerry Zucker"
+    },
+    "1": {
+      "name": "Steven Spielberg"
+    },
+    "2": {
+      "name": "Stanley Kubrick"
+    },
+    "3": {
+      "name": "Martin Scorsese"
+    },
+    "4": {
+      "name": "George Lucas"
+    },
+    "5": {
+      "name": "Ridley Scott"
+    }
+  }
 }
