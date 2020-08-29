@@ -178,3 +178,174 @@ const restFunc = (...args) => {
 const blah = restFunc(1, 2, 3, 4, 5, 6);
 
 console.log(blah);
+
+// ========================================
+
+// Destructuring
+
+let samsNum1, samsNum2, samsNum5;
+
+const numbers = [1, 2, 3, 4, 5];
+
+[samsNum1, samsNum2, , , samsNum5] = numbers;
+
+console.log('samsNum1: ', samsNum1);
+
+console.log('samsNum2: ', samsNum2);
+
+console.log('samsNum5: ', samsNum5);
+
+const hero = {
+  name: 'Batman',
+  realName: 'Bruce Wayne'
+};
+
+const { name, realName } = hero;
+
+console.log('name', name);
+
+console.log('realName', realName);
+
+// ========================================
+
+// Reference Type (vs. Primitive Type)
+
+let myName = 'Samuel';
+
+let myCopiedName = myName;
+
+console.log('myName: ', myName);
+
+myName = 'Dominic';
+
+console.log('myCopiedName: ', myCopiedName);
+
+// -----
+
+let person = {
+  name: 'Samuel' // marker, see comment below
+};
+
+let copiedPerson = {...person};
+/* if i ever copy an object (reference type) then
+i need to basically duplicate the array like
+this (by spreading in the original) otherwise
+it just copies the marker vs. the actual data, so
+the copied version will update when the
+original updates */
+
+console.log('person.name: ', person.name);
+
+person.name = 'Dominic';
+
+console.log('copiedPerson.name: ', copiedPerson.name);
+
+// ========================================
+
+// Refresher on Array Functions
+
+// Array.map()
+
+const numbersArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const numbersArrayMapped = numbersArray.map((arrayElement) => {
+  console.log(arrayElement + ' * 2 = ' + arrayElement * 2);
+  return arrayElement * 2;
+});
+
+console.log('numbersArrayMapped: ', numbersArrayMapped);
+
+// Array.find()
+
+const namesArray = ['Sam', 'Dom', 'Bianca', 'Archer'];
+
+const found = namesArray.find((el) => {
+  return el === 'Archer';
+});
+
+console.log('found: ', found);
+
+// Array.findIndex()
+
+const namesArray2 = ['Sam', 'Dom', 'Bianca', 'Archer'];
+
+const found2 = namesArray2.findIndex((el) => {
+  return el === 'Dom';
+});
+
+console.log('found: ', found2);
+
+// Array.filter()
+
+const heroes = [
+  {name: 'Batman', universe: 'DC'},
+  {name: 'Black Panther', universe: 'Marvel'},
+  {name: 'Superman', universe: 'DC'},
+  {name: 'Thor', universe: 'Marvel'},
+  {name: 'Wonder Woman', universe: 'DC'},
+  {name: 'Iron Man', universe: 'Marvel'}
+];
+
+const marvelHeroes = heroes.filter((el) => {
+  return el.universe === 'Marvel';
+});
+
+const dcHeroes = heroes.filter((el) => {
+  return el.universe === 'DC';
+});
+
+console.log('heroes: ', heroes);
+console.log('marvelHeroes: ', marvelHeroes);
+console.log('dcHeroes: ', dcHeroes);
+
+// Array.concat()
+
+const arrayConcatOne = ['Black Panther', 'Iron Man', 'Thor'];
+const arrayConcatTwo = ['Hulk', 'Captain America', 'Captain Marvel'];
+const arrayConcatThree = arrayConcatOne.concat(arrayConcatTwo);
+console.log('arrayConcatThree: ', arrayConcatThree);
+
+// Array.slice()
+
+const movies = [
+  'Goodfellas',
+  'Star Wars',
+  'Pulp Fiction',
+  'Reservoir Dogs',
+  'Citizen Kane',
+  'Double Indemnity',
+  'The Lives of Others',
+  'Bill and Ted\'s Excellent Adventure',
+  'Police Academy',
+  'Rambo'
+];
+
+console.log('movies: ', movies);
+
+const moviesSliced = movies.slice(2, 8);
+
+console.log('moviesSliced: ', moviesSliced);
+
+// Array.splice()
+
+const movies2 = [
+  'Goodfellas',
+  'Star Wars',
+  'Pulp Fiction',
+  'Reservoir Dogs',
+  'Citizen Kane',
+  'Double Indemnity',
+  'The Lives of Others',
+  'Bill and Ted\'s Excellent Adventure',
+  'Police Academy',
+  'Rambo'
+];
+
+movies2.splice(1, 3, 'Taxi Driver', 'Spaceballs');
+
+console.log('movies2: ', movies2);
+
+
+
+
+
