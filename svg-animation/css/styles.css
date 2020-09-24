@@ -1,0 +1,55 @@
+.dot-wrapper {
+  align-items: center;
+  border: 1px solid gray;
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  margin-bottom: 10px;
+  position: relative;
+  width: 100%; }
+
+.dot-label {
+  background: #e5e5e5;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  padding: 7px 10px;
+  left: 0;
+  position: absolute;
+  top: 0; }
+
+.dot-container {
+  height: 24px;
+  width: 128px; }
+
+.dot {
+  height: 24px;
+  animation: dotSlide 1.2s linear infinite;
+  border-radius: 50%;
+  position: absolute;
+  width: 24px; }
+  .dot--01 {
+    background: #005984; }
+  .dot--02 {
+    background: #26bcd7;
+    animation-delay: -0.4s; }
+  .dot--03 {
+    background: #54b948;
+    animation-delay: -0.8s; }
+
+@keyframes dotSlide {
+  0% {
+    opacity: 0;
+    transform: scale(0.8); }
+  20% {
+    opacity: 1;
+    transform: translateX(21px) scale(1); }
+  80% {
+    opacity: 1;
+    transform: translateX(83px); }
+  100% {
+    opacity: 0;
+    transform: translateX(104px) scale(0.8); } }
+
+svg {
+  height: 24px;
+  width: 128px; }

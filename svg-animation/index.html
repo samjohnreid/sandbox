@@ -9,7 +9,34 @@
 
 <body>
   
-  
+  <div class="dot-wrapper">
+    <span class="dot-label">CSS Animation</span>
+    <div class="dot-container">
+      <span class="dot dot--01"></span>
+      <span class="dot dot--02"></span>
+      <span class="dot dot--03"></span>
+    </div>
+  </div>
+
+  <div class="dot-wrapper">
+    <span class="dot-label">SVG Animations (SMIL)</span>
+    <svg>
+      <circle id="blue-circle" r="12" cx="12" cy="12" fill="#005984" />
+      <animate xlink:href="#blue-circle" attributeName="cx" from="12" to="116" dur="1.2s" begin="0" repeatCount="indefinite" />
+      <animate xlink:href="#blue-circle" attributeName="r" dur="1.2s" begin="0" keyTimes="0; 0.2; 0.8; 1" values="9.6; 12; 12; 9.6" repeatCount="indefinite" />
+      <animate xlink:href="#blue-circle" attributeName="opacity" dur="1.2s" begin="0" keyTimes="0; 0.2; 0.8; 1" values="0; 1; 1; 0" repeatCount="indefinite" />
+
+      <circle id="teal-circle" r="12" cx="12" cy="12" fill="#26bcd7" />
+      <animate xlink:href="#teal-circle" attributeName="cx" from="12" to="116" dur="1.2s" begin="-0.4s" repeatCount="indefinite" />
+      <animate xlink:href="#teal-circle" attributeName="r" dur="1.2s" begin="-0.4s" keyTimes="0; 0.2; 0.8; 1" values="9.6; 12; 12; 9.6" repeatCount="indefinite" />
+      <animate xlink:href="#teal-circle" attributeName="opacity" dur="1.2s" begin="-0.4s" keyTimes="0; 0.2; 0.8; 1" values="0; 1; 1; 0" repeatCount="indefinite" />
+
+      <circle id="green-circle" r="12" cx="12" cy="12" fill="#54b948" />
+      <animate xlink:href="#green-circle" attributeName="cx" from="12" to="116" dur="1.2s" begin="-0.8s" repeatCount="indefinite" />
+      <animate xlink:href="#green-circle" attributeName="r" dur="1.2s" begin="-0.8s" keyTimes="0; 0.2; 0.8; 1" values="9.6; 12; 12; 9.6" repeatCount="indefinite" />
+      <animate xlink:href="#green-circle" attributeName="opacity" dur="1.2s" begin="-0.8s" keyTimes="0; 0.2; 0.8; 1" values="0; 1; 1; 0" repeatCount="indefinite" />
+    </svg>
+  </div>
 
   <script src="js/scripts.js"></script>
 </body>
