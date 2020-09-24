@@ -1,0 +1,35 @@
+.dot-wrapper {
+  align-items: center;
+  border: 1px solid gray;
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  margin-bottom: 10px;
+  position: relative;
+  width: 100%;
+}
+
+.dot-container {
+  background: #f7f7f7;
+  height: 24px;
+  width: 128px;
+}
+
+.dot {
+  height: 24px;
+  border-radius: 50%;
+  position: absolute;
+  width: 24px;
+
+  &--01 {
+    background: #005984;
+  }
+
+  &--02 {
+    background: #26bcd7;
+  }
+
+  &--03 {
+    background: #54b948;
+  }
+}
