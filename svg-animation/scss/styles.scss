@@ -69,3 +69,22 @@ svg {
   height: 24px;
   width: 128px;
 }
+
+.dot-waapi {
+  height: 24px;
+  border-radius: 50%;
+  position: absolute;
+  width: 24px;
+
+  &--01 {
+    background: #005984;
+  }
+
+  &--02 {
+    background: #26bcd7;
+  }
+
+  &--03 {
+    background: #54b948;
+  }
+}
