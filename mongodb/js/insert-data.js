@@ -16,10 +16,10 @@ const client = new MongoClient(url);
          // Construct a document                                                                                                                                                              
          let test_document = [
           {
-            id: 42,
-            title: `The Hitchhiker's Guide to the Galaxy`,
-            year: 1979,
-            author: `Douglas Adams`
+            id: 1000,
+            title: `Infinite Jest`,
+            year: 1996,
+            author: `David Foster Wallace`
           }
          ]
          // Insert a single document, wait for promise so we can read it back
