@@ -1,0 +1,19 @@
+{
+  "movies": {
+    "1": {
+      "director" : "Steven Spielberg",
+      "title" : "Raiders of the Lost Ark",
+      "year" : "1981"
+    },
+    "2": {
+      "director" : "David Fincher",
+      "title" : "Mank",
+      "year" : "2021"
+    },
+    "3": {
+      "director" : "Ivan Reitman",
+      "title" : "Ghostbusters",
+      "year" : "1984"
+    }
+  }
+}
