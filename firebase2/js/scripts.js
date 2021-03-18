@@ -1,15 +1,13 @@
-var movies = firebase.database().ref('movies');
+var votes = firebase.database().ref('votes/dominic');
 
-function addMovie() {
-  movies.push({
-    "director" : "Ivan Reitman",
-    "title" : "Ghostbusters",
-    "year" : "1984"
-  });
-}
+const megaForm = document.getElementById('megaForm');
 
-movies.on('value', (snapshot) => {
-  console.log(snapshot.val());
+megaForm.addEventListener('change', (event) => {
+  const selectMenu = event.target.name;
+  
+  const postData = {
+    [selectMenu]: event.target.value
+  };
+
+  votes.update(postData);
 });
-
-// addMovie();
