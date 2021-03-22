@@ -1,167 +1,154 @@
+/*
+1. get data for votes for individual user
+2. for each category, create the label and select, inserting `for`, `id`, `name` and label text
+3. loop through nominations and render `options` for each
+4. check if nomination already chosen and if so, use as selected
+*/
+
+const userName = window.location.pathname.split('/')[1];
+const userVotes = firebase.database().ref(`votes/${userName}`);
+
+const bestPictureNoms = [
+  `The Father`,
+  `Judas and the Black Messiah`,
+  `Mank`,
+  `Minari`,
+  `Nomadland`,
+  `Promising Young Woman`,
+  `Sound of Metal`,
+  `The Trial of the Chicago 7`
+];
+
+const bestDirectorNoms = [
+  `David Fincher - Mank`,
+  `Lee Isaac Chung - Minari`,
+  `Chloé Zhao - Nomadland`,
+  `Emerald Fennell - Promising Young Woman`
+];
+
+const bestActressNoms = [
+  `Viola Davis - Ma Rainey’s Black Bottom`,
+  `Andra Day - The United States v. Billie Holiday`,
+  `Vanessa Kirby - Pieces of a Woman`,
+  `Frances McDormand - Nomadland`,
+  `Carey Mulligan - Promising Young Woman`
+];
+
+const bestActorNoms = [
+  `Riz Ahmed - Sound of Metal`,
+  `Chadwick Boseman - Ma Rainey’s Black Bottom`,
+  `Anthony Hopkins - The Father`,
+  `Gary Oldman - Mank`,
+  `Steven Yeun - Minari`
+];
+
+const bestSupportingActressNoms = [
+  `Maria Bakalova - Borat Subsequent Moviefilm`,
+  `Glenn Close - Hillbilly Elegy`,
+  `Olivia Colman - The Father`,
+  `Amanda Seyfried - Mank`,
+  `Youn Yuh-jung - Minari`
+];
+
+const bestSupportingActorNoms = [
+  `Sacha Baron Cohen - The Trial of the Chicago 7`,
+  `Daniel Kaluuya - Judas and the Black Messiah`,
+  `Leslie Odom Jr. - One Night in Miami`,
+  `Paul Raci - Sound of Metal`,
+  `Lakeith Stanfield - Judas and the Black Messiah`
+];
+
+const bestAdaptedScreenplayNoms = [
+  `Borat Subsequent Moviefilm - Peter Baynham, Sacha Baron Cohen, Jena Friedman, Anthony Hines, Lee Kern, Dan Mazer, Nina Pedrad, Erica Rivinoja, Dan Swimer`,
+  `The Father - Christopher Hampton, Florian Zeller`,
+  `Nomadland - Chloé Zhao`,
+  `One Night in Miami - Kemp Powers`,
+  `The White Tiger - Ramin Bahrani`
+];
+
+const bestOriginalScreenplayNoms = [
+  `Judas and the Black Messiah - Will Berson, Shaka King, Keith Lucas, Kenneth Lucas`,
+  `Minari - Lee Isaac Chung`,
+  `Promising Young Woman - Emerald Fennell`,
+  `Sound of Metal - Abraham Marder, Darius Marder, Derek Cianfrance`,
+  `The Trial of the Chicago 7 - Aaron Sorkin`
+];
+
+const bestCostumeDesignNoms = [
+  `Emma`,
+  `Mank`,
+  `Ma Rainey’s Black Bottom`,
+  `Mulan`,
+  `Pinocchio`
+];
+
+const bestAnimatedFeatureFilmNoms = [
+  `Onward`,
+  `Over the Moon`,
+  `Shaun the Sheep Movie: Farmageddon`,
+  `Soul`,
+  `Wolfwalkers`
+];
+
+const bestMakeupAndHairstylingNoms = [
+  `Emma`,
+  `Hillbilly Elegy`,
+  `Ma Rainey’s Black Bottom`,
+  `Mank, Kimberley Spiteri`,
+  `Pinocchio`
+];
+
+const bestVisualEffectsNoms = [
+  `Love and Monsters`,
+  `The Midnight Sky`,
+  `Mulan`,
+  `The One and Only Ivan`,
+  `Tenet`
+];
+
+console.log('bestPictureNoms: ', bestPictureNoms);
+
+const logVotes = (data) => {
+  console.log('user votes: ', data);
+};
+
+userVotes.on('value', (snapshot) => {
+  const votesSnapshot = snapshot.val();
+  logVotes(votesSnapshot);
+});
+
+const renderCategory = (forAndId, label, name, category) => {
+  return `
+    <div>
+      <label for="${forAndId}">${label}:</label>
+      <select name="${name}" id="${forAndId}">
+        <option value="">--Please Select a Winner!--</option>
+        ${category.map((item) => {
+          return `<option>${item}</option>`;
+        }).join('')}
+      </select>
+    </div>
+  `;
+};
+
 const renderVotes = () => {
   const userVotesEl = document.createElement('form');
   userVotesEl.setAttribute('id', 'userVotes');
   
   const userVotesContent = `
     <ul>
-      <li>
-        <div>
-          <label for="best-picture">Best Picture:</label>
-          <select name="bestPicture" id="best-picture">
-            <option value="">--Please Select a Winner!--</option>
-            <option>The Father</option>
-            <option>Judas and the Black Messiah</option>
-            <option>Mank</option>
-            <option>Minari</option>
-            <option>Nomadland</option>
-            <option>Promising Young Woman</option>
-            <option>Sound of Metal</option>
-            <option>The Trial of the Chicago 7</option>
-          </select>
-        </div>
-      </li>
-      <li>
-        <div>
-          <label for="best-director">Best Director:</label>
-          <select name="bestDirector" id="best-director">
-            <option value="">--Please Select a Winner!--</option>
-            <option>David Fincher - Mank</option>
-            <option>Lee Isaac Chung - Minari</option>
-            <option>Chloé Zhao - Nomadland</option>
-            <option>Emerald Fennell - Promising Young Woman</option>
-          </select>
-        </div>
-      </li>
-      <li>
-        <div>
-          <label for="best-actress">Best Actress:</label>
-          <select name="bestActress" id="best-actress">
-            <option value="">--Please Select a Winner!--</option>
-            <option>Viola Davis - Ma Rainey’s Black Bottom</option>
-            <option>Andra Day - The United States v. Billie Holiday</option>
-            <option>Vanessa Kirby - Pieces of a Woman</option>
-            <option>Frances McDormand - Nomadland</option>
-            <option>Carey Mulligan - Promising Young Woman</option>
-          </select>
-        </div>
-      </li>
-      <li>
-        <div>
-          <label for="best-actor">Best Actor:</label>
-          <select name="bestActor" id="best-actor">
-            <option value="">--Please Select a Winner!--</option>
-            <option>Riz Ahmed - Sound of Metal</option>
-            <option>Chadwick Boseman - Ma Rainey’s Black Bottom</option>
-            <option>Anthony Hopkins - The Father</option>
-            <option>Gary Oldman - Mank</option>
-            <option>Steven Yeun - Minari</option>
-          </select>
-        </div>
-      </li>
-      <li>
-        <div>
-          <label for="best-supporting-actress">Best Supporting Actress:</label>
-          <select name="bestSupportingActress" id="best-supporting-actress">
-            <option value="">--Please Select a Winner!--</option>
-            <option>Maria Bakalova - Borat Subsequent Moviefilm</option>
-            <option>Glenn Close - Hillbilly Elegy</option>
-            <option>Olivia Colman - The Father</option>
-            <option>Amanda Seyfried - Mank</option>
-            <option>Youn Yuh-jung - Minari</option>
-          </select>
-        </div>
-      </li>
-      <li>
-        <div>
-          <label for="best-supporting-actor">Best Supporting Actor:</label>
-          <select name="bestSupportingActor" id="best-supporting-actor">
-            <option value="">--Please Select a Winner!--</option>
-            <option>Sacha Baron Cohen - The Trial of the Chicago 7</option>
-            <option>Daniel Kaluuya - Judas and the Black Messiah</option>
-            <option>Leslie Odom Jr. - One Night in Miami</option>
-            <option>Paul Raci - Sound of Metal</option>
-            <option>Lakeith Stanfield - Judas and the Black Messiah</option>
-          </select>
-        </div>
-      </li>
-      <li>
-        <div>
-          <label for="best-adapted-screenplay">Best Adapted Screenplay:</label>
-          <select name="bestAdaptedScreenplay" id="best-adapted-screenplay">
-            <option value="">--Please Select a Winner!--</option>
-            <option>Borat Subsequent Moviefilm - Peter Baynham, Sacha Baron Cohen, Jena Friedman, Anthony Hines, Lee Kern, Dan Mazer, Nina Pedrad, Erica Rivinoja, Dan Swimer</option>
-            <option>The Father - Christopher Hampton, Florian Zeller</option>
-            <option>Nomadland - Chloé Zhao</option>
-            <option>One Night in Miami - Kemp Powers</option>
-            <option>The White Tiger - Ramin Bahrani</option>
-          </select>
-        </div>
-      </li>
-      <li>
-        <div>
-          <label for="best-original-screenplay">Best Original Screenplay:</label>
-          <select name="bestOriginalScreenplay" id="best-original-screenplay">
-            <option value="">--Please Select a Winner!--</option>
-            <option>Judas and the Black Messiah - Will Berson, Shaka King, Keith Lucas, Kenneth Lucas</option>
-            <option>Minari - Lee Isaac Chung</option>
-            <option>Promising Young Woman - Emerald Fennell</option>
-            <option>Sound of Metal - Abraham Marder, Darius Marder, Derek Cianfrance</option>
-            <option>The Trial of the Chicago 7 - Aaron Sorkin</option>
-          </select>
-        </div>
-      </li>
-      <li>
-        <div>
-          <label for="best-costume-design">Best Costume Design:</label>
-          <select name="bestCostumeDesign" id="best-costume-design">
-            <option value="">--Please Select a Winner!--</option>
-            <option>Emma</option>
-            <option>Mank</option>
-            <option>Ma Rainey’s Black Bottom</option>
-            <option>Mulan</option>
-            <option>Pinocchio</option>
-          </select>
-        </div>
-      </li>
-      <li>
-        <div>
-          <label for="best-animated-feature-film">Best Animated Feature Film:</label>
-          <select name="bestAnimatedFeatureFilm" id="best-animated-feature-film">
-            <option value="">--Please Select a Winner!--</option>
-            <option>Onward</option>
-            <option>Over the Moon</option>
-            <option>Shaun the Sheep Movie: Farmageddon</option>
-            <option>Soul</option>
-            <option>Wolfwalkers</option>
-          </select>
-        </div>
-      </li>
-      <li>
-        <div>
-          <label for="best-makeup-and-hairstyling">Best Makeup and Hairstyling:</label>
-          <select name="bestMakeupAndHairstyling" id="best-makeup-and-hairstyling">
-            <option value="">--Please Select a Winner!--</option>
-            <option>Emma</option>
-            <option>Hillbilly Elegy</option>
-            <option>Ma Rainey’s Black Bottom</option>
-            <option>Mank, Kimberley Spiteri</option>
-            <option>Pinocchio</option>
-          </select>
-        </div>
-      </li>
-      <li>
-        <div>
-          <label for="best-visual-effects">Best Visual Effects:</label>
-          <select name="bestVisualEffects" id="best-visual-effects">
-            <option value="">--Please Select a Winner!--</option>
-            <option>Love and Monsters</option>
-            <option>The Midnight Sky</option>
-            <option>Mulan</option>
-            <option>The One and Only Ivan</option>
-            <option>Tenet</option>
-          </select>
-        </div>
-      </li>
+      <li>${renderCategory('best-picture', 'Best Picture', 'bestPicture', bestPictureNoms)}</li>
+      <li>${renderCategory('best-director', 'Best Director', 'bestDirector', bestDirectorNoms)}</li>
+      <li>${renderCategory('best-actress', 'Best Actress', 'bestActress', bestActressNoms)}</li>
+      <li>${renderCategory('best-actor', 'Best Actor', 'bestActor', bestActorNoms)}</li>
+      <li>${renderCategory('best-supporting-actress', 'Best Supporting Actress', 'bestSupportingActress', bestSupportingActressNoms)}</li>
+      <li>${renderCategory('best-supportingActor', 'Best SupportingActor', 'bestSupportingActor', bestSupportingActorNoms)}</li>
+      <li>${renderCategory('best-adapted-screenplay', 'Best Adapted Screenplay', 'bestAdaptedScreenplay', bestAdaptedScreenplayNoms)}</li>
+      <li>${renderCategory('best-original-sreenplay', 'Best Original Screenplay', 'bestOriginalScreenplay', bestOriginalScreenplayNoms)}</li>
+      <li>${renderCategory('best-costume-design', 'Best Costume Design', 'bestCostumeDesign', bestCostumeDesignNoms)}</li>
+      <li>${renderCategory('best-animated-feature-film', 'Best Animated Feature Film', 'bestAnimatedFeatureFilm', bestAnimatedFeatureFilmNoms)}</li>
+      <li>${renderCategory('best-makeup-and-hairstyling', 'Best Makeup And Hairstyling', 'bestMakeupAndHairstyling', bestMakeupAndHairstylingNoms)}</li>
+      <li>${renderCategory('best-visual-effects', 'Best Visual Effects', 'bestVisualEffects', bestVisualEffectsNoms)}</li>
     </ul>
     <div>
       <button>Done!</button>

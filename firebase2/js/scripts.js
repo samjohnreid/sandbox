@@ -13,11 +13,11 @@ appRoot.append(
 
 // **************************************************
 
-var votes = firebase.database().ref(`votes/${userName}`);
+const votes = firebase.database().ref(`votes/${userName}`);
 
-const megaForm = document.getElementById('userVotes');
+const userVotesForm = document.getElementById('userVotes');
 
-megaForm.addEventListener('change', (event) => {
+userVotesForm.addEventListener('change', (event) => {
   const selectMenu = event.target.name;
   
   const postData = {
