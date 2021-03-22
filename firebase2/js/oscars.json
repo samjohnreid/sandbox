@@ -1,24 +1,46 @@
 {
-  "votes": {
-    "dominic": {
-      "bestPicture": "",
-      "bestDirector": "",
-      "bestActress": "",
-      "bestActor": "",
-      "bestSupportingActress": "",
-      "bestSupportingActor": "",
-      "bestAdaptedScreenplay": "",
-      "bestOriginalScreenplay": "",
-      "bestCostumeDesign": "",
-      "bestAnimatedFeatureFilm": "",
-      "bestMakeupAndHairstyling": "",
-      "bestVisualEffects": ""
+  "votes" : {
+    "dominic" : {
+      "bestActor" : "Anthony Hopkins - The Father",
+      "bestActress" : "Andra Day - The United States v. Billie Holiday",
+      "bestAdaptedScreenplay" : "The White Tiger - Ramin Bahrani",
+      "bestAnimatedFeatureFilm" : "Shaun the Sheep Movie: Farmageddon",
+      "bestCostumeDesign" : "Emma",
+      "bestDirector" : "David Fincher - Mank",
+      "bestMakeupAndHairstyling" : "Emma",
+      "bestOriginalScreenplay" : "Minari - Lee Isaac Chung",
+      "bestPicture" : "Sound of Metal",
+      "bestSupportingActor" : "Sacha Baron Cohen - The Trial of the Chicago 7",
+      "bestSupportingActress" : "Olivia Colman - The Father",
+      "bestVisualEffects" : "Love and Monsters"
+    },
+    "bianca" : {
+      "bestActor" : "Anthony Hopkins - The Father",
+      "bestActress" : "Andra Day - The United States v. Billie Holiday",
+      "bestAdaptedScreenplay" : "The White Tiger - Ramin Bahrani",
+      "bestAnimatedFeatureFilm" : "Shaun the Sheep Movie: Farmageddon",
+      "bestCostumeDesign" : "Emma",
+      "bestDirector" : "David Fincher - Mank",
+      "bestMakeupAndHairstyling" : "Emma",
+      "bestOriginalScreenplay" : "Minari - Lee Isaac Chung",
+      "bestPicture" : "Sound of Metal",
+      "bestSupportingActor" : "Sacha Baron Cohen - The Trial of the Chicago 7",
+      "bestSupportingActress" : "Olivia Colman - The Father",
+      "bestVisualEffects" : "Love and Monsters"
+    },
+    "sam" : {
+      "bestActor" : "Anthony Hopkins - The Father",
+      "bestActress" : "Andra Day - The United States v. Billie Holiday",
+      "bestAdaptedScreenplay" : "The White Tiger - Ramin Bahrani",
+      "bestAnimatedFeatureFilm" : "Shaun the Sheep Movie: Farmageddon",
+      "bestCostumeDesign" : "Emma",
+      "bestDirector" : "David Fincher - Mank",
+      "bestMakeupAndHairstyling" : "Emma",
+      "bestOriginalScreenplay" : "Minari - Lee Isaac Chung",
+      "bestPicture" : "Sound of Metal",
+      "bestSupportingActor" : "Sacha Baron Cohen - The Trial of the Chicago 7",
+      "bestSupportingActress" : "Olivia Colman - The Father",
+      "bestVisualEffects" : "Love and Monsters"
     }
   }
 }
-
-
-
-
-
-

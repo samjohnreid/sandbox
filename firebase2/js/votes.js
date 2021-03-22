@@ -1,24 +1,8 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Oscars Showdown 2021</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="img/favicon.png">
-</head>
-
-<body>
+const renderVotes = () => {
+  const userVotesEl = document.createElement('form');
+  userVotesEl.setAttribute('id', 'userVotes');
   
-  <div id="app"></div>
-  
-  <h2>To Sam's Famous Annual Oscars Showdown 2021!</h2>
-
-  <p>Please make your selections for the 93rd Academy Awards below.</p>
-
-  <small>You can come back and change them any time before the event starts on Sunday, April 25, 2021 at 8:00 PM Eastern Time</small>
-
-  <form id="megaForm">
+  const userVotesContent = `
     <ul>
       <li>
         <div>
@@ -182,26 +166,10 @@
     <div>
       <button>Done!</button>
     </div>
-  </form>
+  `;
+  userVotesEl.innerHTML = userVotesContent;
 
-  <!-- Core Firebase JS SDK -->
-  <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
-  <!-- SDKs for Firebase products -->
-  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
-  <script>
-    // Firebase configuration
-    var firebaseConfig = {
-      apiKey: "AIzaSyCN_1-Oe_PLTXfR3e4Z8zeFIyKsG-6dBrw",
-      authDomain: "oscars-2021.firebaseapp.com",
-      databaseURL: "https://oscars-2021-default-rtdb.firebaseio.com",
-      projectId: "oscars-2021",
-      storageBucket: "oscars-2021.appspot.com",
-      messagingSenderId: "861066941311",
-      appId: "1:861066941311:web:90e533e74165ed42a7804a"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-  </script>
-  <script src="js/scripts.js"></script>
-</body>
-</html>
+  return userVotesEl;
+};
+
+export default renderVotes;
