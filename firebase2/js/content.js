@@ -17,6 +17,11 @@ const disclaimerEl = document.createElement('small');
 const disclaimerContent = document.createTextNode(`You can come back and change them any time before the event starts on Sunday, April 25, 2021 at 8:00 PM Eastern Time`);
 disclaimerEl.appendChild(disclaimerContent);
 
-const renderContent = () => appRoot.append(titleEl, subtitleEl, introEl, disclaimerEl);
+const renderContent = () => (
+  appRoot.appendChild(titleEl),
+  appRoot.appendChild(subtitleEl),
+  appRoot.appendChild(introEl),
+  appRoot.appendChild(disclaimerEl)
+);
 
 export default renderContent;

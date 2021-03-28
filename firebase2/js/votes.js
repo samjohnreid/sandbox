@@ -3,15 +3,11 @@ import noms from './noms.js';
 const userName = window.location.pathname.split('/')[1];
 const userVotes = firebase.database().ref(`votes/${userName}`);
 
-console.log('bestPictureNoms: ', noms.bestPictureNoms);
-
-const logVotes = (data) => {
-  console.log('user votes: ', data);
-};
+let userVotesObject = {};
 
 userVotes.on('value', (snapshot) => {
   const votesSnapshot = snapshot.val();
-  logVotes(votesSnapshot);
+  userVotesObject = Object.assign({}, votesSnapshot);
 });
 
 const renderCategory = (forAndId, label, name, category) => {

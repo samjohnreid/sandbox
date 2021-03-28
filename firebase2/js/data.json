@@ -1,19 +1,46 @@
 {
-  "movies": {
-    "1": {
-      "director" : "Steven Spielberg",
-      "title" : "Raiders of the Lost Ark",
-      "year" : "1981"
+  "votes" : {
+    "dominic" : {
+      "bestActor" : "Anthony Hopkins - The Father",
+      "bestActress" : "Andra Day - The United States v. Billie Holiday",
+      "bestAdaptedScreenplay" : "The White Tiger - Ramin Bahrani",
+      "bestAnimatedFeatureFilm" : "Shaun the Sheep Movie: Farmageddon",
+      "bestCostumeDesign" : "Emma",
+      "bestDirector" : "David Fincher - Mank",
+      "bestMakeupAndHairstyling" : "Emma",
+      "bestOriginalScreenplay" : "Minari - Lee Isaac Chung",
+      "bestPicture" : "Sound of Metal",
+      "bestSupportingActor" : "Sacha Baron Cohen - The Trial of the Chicago 7",
+      "bestSupportingActress" : "Olivia Colman - The Father",
+      "bestVisualEffects" : "Love and Monsters"
     },
-    "2": {
-      "director" : "David Fincher",
-      "title" : "Mank",
-      "year" : "2021"
+    "bianca" : {
+      "bestActor" : "Anthony Hopkins - The Father",
+      "bestActress" : "Andra Day - The United States v. Billie Holiday",
+      "bestAdaptedScreenplay" : "The White Tiger - Ramin Bahrani",
+      "bestAnimatedFeatureFilm" : "Shaun the Sheep Movie: Farmageddon",
+      "bestCostumeDesign" : "Emma",
+      "bestDirector" : "David Fincher - Mank",
+      "bestMakeupAndHairstyling" : "Emma",
+      "bestOriginalScreenplay" : "Minari - Lee Isaac Chung",
+      "bestPicture" : "Sound of Metal",
+      "bestSupportingActor" : "Sacha Baron Cohen - The Trial of the Chicago 7",
+      "bestSupportingActress" : "Olivia Colman - The Father",
+      "bestVisualEffects" : "Love and Monsters"
     },
-    "3": {
-      "director" : "Ivan Reitman",
-      "title" : "Ghostbusters",
-      "year" : "1984"
+    "sam" : {
+      "bestActor" : "Anthony Hopkins - The Father",
+      "bestActress" : "Andra Day - The United States v. Billie Holiday",
+      "bestAdaptedScreenplay" : "The White Tiger - Ramin Bahrani",
+      "bestAnimatedFeatureFilm" : "Shaun the Sheep Movie: Farmageddon",
+      "bestCostumeDesign" : "Emma",
+      "bestDirector" : "David Fincher - Mank",
+      "bestMakeupAndHairstyling" : "Emma",
+      "bestOriginalScreenplay" : "Minari - Lee Isaac Chung",
+      "bestPicture" : "Sound of Metal",
+      "bestSupportingActor" : "Sacha Baron Cohen - The Trial of the Chicago 7",
+      "bestSupportingActress" : "Olivia Colman - The Father",
+      "bestVisualEffects" : "Love and Monsters"
     }
   }
 }
