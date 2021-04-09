@@ -1,3 +1,9 @@
-header, footer {
-  outline: 1px dotted orange;
+td, th {
+  border: 1px solid black;
+  text-align: center;
+  padding: 10px;
+}
+
+tr td:first-child {
+  text-align: right;
 }

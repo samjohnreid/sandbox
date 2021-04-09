@@ -1,7 +1,7 @@
 * for user noms, make current choices display as option in list OR have "please select a winner!" option
 * make individual page for each user with hash (https://randomkeygen.com/)
+* make page that displays ALL the users/winners with their wins/losses etc.
 - make my form where i can select the winners, which will then update the "winners" parts of each user
-- make page that displays ALL the users/winners with their wins/losses etc.
 * make nom selection form dynamically generated from arrays
 
 

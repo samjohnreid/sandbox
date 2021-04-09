@@ -66,7 +66,7 @@ const UserVotes = () => {
           <li>{renderCategory('best-actress', 'Best Actress', 'bestActress', noms.bestActressNoms)}</li>
           <li>{renderCategory('best-actor', 'Best Actor', 'bestActor', noms.bestActorNoms)}</li>
           <li>{renderCategory('best-supporting-actress', 'Best Supporting Actress', 'bestSupportingActress', noms.bestSupportingActressNoms)}</li>
-          <li>{renderCategory('best-supportingActor', 'Best SupportingActor', 'bestSupportingActor', noms.bestSupportingActorNoms)}</li>
+          <li>{renderCategory('best-supporting Actor', 'Best Supporting Actor', 'bestSupportingActor', noms.bestSupportingActorNoms)}</li>
           <li>{renderCategory('best-adapted-screenplay', 'Best Adapted Screenplay', 'bestAdaptedScreenplay', noms.bestAdaptedScreenplayNoms)}</li>
           <li>{renderCategory('best-original-sreenplay', 'Best Original Screenplay', 'bestOriginalScreenplay', noms.bestOriginalScreenplayNoms)}</li>
           <li>{renderCategory('best-costume-design', 'Best Costume Design', 'bestCostumeDesign', noms.bestCostumeDesignNoms)}</li>
