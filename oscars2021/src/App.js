@@ -2,6 +2,7 @@ import React from 'react';
 import IntroContent from './IntroContent';
 import UserVotes from './UserVotes';
 import ResultsTable from './ResultsTable';
+import SelectWinners from './SelectWinners';
 
 const App = () => {
   return (
@@ -11,6 +12,8 @@ const App = () => {
       <UserVotes />
       <hr />
       <ResultsTable />
+      <hr />
+      <SelectWinners />
     </>
   );
 };

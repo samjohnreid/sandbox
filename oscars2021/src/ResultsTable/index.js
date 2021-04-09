@@ -6,7 +6,7 @@ const votes = firebase.database().ref(`votes`);
 
 // **********
 
-const ResultsTable = (props) => {
+const ResultsTable = () => {
   const [results, setResults] = useState();
   
   useEffect(() => {
