@@ -27,12 +27,16 @@
   background: blue; }
 
 .nav-wrapper.sticky {
-  display: block;
-  position: fixed;
-  top: 0;
-  width: 100%; }
-  .nav-wrapper.sticky .banner02 {
-    height: 80px; }
+  transform: translate(0, 0);
+  transition: all 0.5s;
+  opacity: 1; }
 
 .cloned {
-  display: none; }
+  position: fixed;
+  transition-duration: 0.25s;
+  top: 0;
+  transform: translate(0, -100%);
+  width: 100%;
+  opacity: 0; }
+  .cloned .banner02 {
+    height: 80px; }
