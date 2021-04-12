@@ -9,3 +9,24 @@
   height: 100px;
   background: rebeccapurple;
   width: 100%; }
+
+.banner {
+  align-items: center;
+  display: flex;
+  height: 60px;
+  justify-content: center; }
+
+.banner01 {
+  background: red; }
+
+.banner02 {
+  background: green;
+  height: 120px; }
+
+.banner03 {
+  background: blue; }
+
+.nav-wrapper.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%; }
