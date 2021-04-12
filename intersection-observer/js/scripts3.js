@@ -1,3 +1,5 @@
+// IntersectionObserver stuff
+
 const outerNavWrapper = document.querySelector('[aria-label="main navigation"]');
 const navWrapper = document.querySelector('.nav-wrapper');
 
@@ -13,6 +15,16 @@ observer = new IntersectionObserver((entry) => {
 
 observer.observe(outerNavWrapper);
 
+
+// clone the navbar node to avoid layout shift when element pulled out of document flow
+
+const clonedNavWrapper = navWrapper.cloneNode(true);
+clonedNavWrapper.classList.add('cloned');
+outerNavWrapper.appendChild(clonedNavWrapper);
+
+
+// scroll direction detection stuff, and add sticky class
+
 let lastScrollTop = 0, scrollUp;
 
 window.addEventListener('scroll', () => {
@@ -20,9 +32,8 @@ window.addEventListener('scroll', () => {
   lastScrollTop = (window.pageYOffset <= 0) ? 0 : window.pageYOffset;
   
   if (scrollUp && !navWrapperInView) {
-    console.log('user is scrolling up AND navwrapper is not currently in thew viewport');
-    navWrapper.classList.add('sticky');
+    clonedNavWrapper.classList.add('sticky');
   } else {
-    navWrapper.classList.remove('sticky');
+    clonedNavWrapper.classList.remove('sticky');
   }
 });

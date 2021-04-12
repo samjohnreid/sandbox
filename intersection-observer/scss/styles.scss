@@ -36,8 +36,17 @@
 .nav-wrapper {
   
   &.sticky {
+    display: block;
     position: fixed;
     top: 0;
     width: 100%;
+
+    .banner02 {
+      height: 80px;
+    }
   }
+}
+
+.cloned {
+  display: none;
 }
