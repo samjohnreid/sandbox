@@ -1,0 +1,19 @@
+{
+  "movies": {
+    "one": {
+      "title": "Star Wars: Episode IV – A New Hope",
+      "director": "George Lucas",
+      "year": 1977
+    },
+    "two": {
+      "title": "Goodfellas",
+      "director": "Martin Scorsese",
+      "year": 1990
+    },
+    "three": {
+      "title": "In the Mood for Love",
+      "director": "Wong Kar-wai",
+      "year": 2000
+    }
+  }
+}

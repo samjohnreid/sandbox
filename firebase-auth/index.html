@@ -11,6 +11,29 @@
   
   <p>Attempting Firebase authentication... again.</p>
 
+  <ul id="movies">movies here...</ul>
+
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+
+  <!-- SDKs for Firebase products -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-database.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyCinn4egSQKaVrpIY8-HuX5b75CNfboFAM",
+      authDomain: "test-auth-b8b28.firebaseapp.com",
+      databaseURL: "https://test-auth-b8b28-default-rtdb.firebaseio.com",
+      projectId: "test-auth-b8b28",
+      storageBucket: "test-auth-b8b28.appspot.com",
+      messagingSenderId: "1075295186595",
+      appId: "1:1075295186595:web:63a225c191340645c15916"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
   <script src="js/scripts.js"></script>
 </body>
 </html>
