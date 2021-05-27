@@ -9,15 +9,25 @@
 
 <body>
   
+  <div id="firebaseui-auth-container"></div>
+  <div id="loader">Loading...</div>
+  
   <p>Attempting Firebase authentication... again.</p>
 
-  <ul id="movies">movies here...</ul>
+  <ul id="movies"><li>movies here...</li></ul>
+
+  <button id="addMovieButton">Add New Movie</button>
+
+  <button id="signOutButton">Sign Out!</button>
 
   <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
 
   <!-- SDKs for Firebase products -->
   <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
 
   <script>
     // Your web app's Firebase configuration
