@@ -10,34 +10,26 @@ const movieList = document.getElementById('movies');
 
 const samsCoolMovieFunction = (data) => {
   moviesObject = data;
-  moviesHTML = `
-    <li>
-      ${moviesObject['-Mb3yYQop0nootoIsDlA'].title}
-      <ul>
-        <li>${moviesObject['-Mb3yYQop0nootoIsDlA'].director}</li>
-        <li>${moviesObject['-Mb3yYQop0nootoIsDlA'].year}</li>
-      </ul>
-    </li>
-    <li>
-      ${moviesObject['-Mb3zf2CULhb7ao4fvIT'].title}
-      <ul>
-        <li>${moviesObject['-Mb3zf2CULhb7ao4fvIT'].director}</li>
-        <li>${moviesObject['-Mb3zf2CULhb7ao4fvIT'].year}</li>
-      </ul>
-    </li>
-    <li>
-      ${moviesObject['-Mb4--azx9n4Qt6ybOCl'].title}
-      <ul>
-        <li>${moviesObject['-Mb4--azx9n4Qt6ybOCl'].director}</li>
-        <li>${moviesObject['-Mb4--azx9n4Qt6ybOCl'].year}</li>
-      </ul>
-    </li>
-  `;
+  console.log(moviesObject);
+  Object.entries(moviesObject).forEach((movie) => {
+    moviesHTML += `
+      <li>
+        ${movie[1].title}
+        <ul>
+          <li>${movie[1].director}</li>
+          <li>${movie[1].year}</li>
+        </ul>
+      </li>
+    `;
+  });
   movieList.innerHTML = moviesHTML;
 };
 
 database.on('value', (snapshot) => {
   const data = snapshot.val();
+  Object.entries(data).forEach((item) => {
+    console.log('item[1]: ', item[1]);
+  });
   samsCoolMovieFunction(data);
 });
 
@@ -46,9 +38,9 @@ database.on('value', (snapshot) => {
 const addMovieBtnClicked = () => {
 
   const newMovie = {
-    "title": "In the Mood for Love",
-    "year": 2000,
-    "director": "Wong Kar-wai"
+    "title": "Kill Bill: Volume 1",
+    "year": 2003,
+    "director": "Quentin Tarantino"
   };
   
   database.push(newMovie, function() {
