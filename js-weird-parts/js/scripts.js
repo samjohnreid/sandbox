@@ -1,10 +1,11 @@
+const samObject1 = new Object();
 
-samFunc();
+samObject1['firstName'] = 'Samuel';
+samObject1['lastName'] = 'Reid';
+samObject1.hairColor = 'Brown';
 
-function samFunc() {
-  console.log('hello, sammers!');
-}
+samObject1.faves = new Object();
+samObject1.faves.food = 'Sushi';
+samObject1['faves']['movie'] = 'Goodfellas';
 
-var samVar = 'hello sam this is a var!';
-
-console.log(samVar);
+console.log('samObject1: ', samObject1);
