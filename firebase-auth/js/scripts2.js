@@ -10,7 +10,7 @@ const movieList = document.getElementById('movies');
 
 const samsCoolMovieFunction = (data) => {
   moviesObject = data;
-  console.log(moviesObject);
+  moviesHTML = '';
   Object.entries(moviesObject).forEach((movie) => {
     moviesHTML += `
       <li>
@@ -27,9 +27,6 @@ const samsCoolMovieFunction = (data) => {
 
 database.on('value', (snapshot) => {
   const data = snapshot.val();
-  Object.entries(data).forEach((item) => {
-    console.log('item[1]: ', item[1]);
-  });
   samsCoolMovieFunction(data);
 });
 
@@ -37,10 +34,16 @@ database.on('value', (snapshot) => {
 
 const addMovieBtnClicked = () => {
 
+  const movieTitle = document.getElementById('title').value;
+  const movieDirector = document.getElementById('director').value;
+  const movieYear = document.getElementById('year').value;
+
+  console.log(movieTitle);
+  
   const newMovie = {
-    "title": "Kill Bill: Volume 1",
-    "year": 2003,
-    "director": "Quentin Tarantino"
+    "title": movieTitle,
+    "year": movieYear,
+    "director": movieDirector
   };
   
   database.push(newMovie, function() {
