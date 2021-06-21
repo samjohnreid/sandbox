@@ -1,11 +1,33 @@
-const samObject1 = new Object();
+// by value (primitives)
+var a = 3;
+var b;
 
-samObject1['firstName'] = 'Samuel';
-samObject1['lastName'] = 'Reid';
-samObject1.hairColor = 'Brown';
+b = a;
+a = 2;
 
-samObject1.faves = new Object();
-samObject1.faves.food = 'Sushi';
-samObject1['faves']['movie'] = 'Goodfellas';
+console.log(a);
+console.log(b);
 
-console.log('samObject1: ', samObject1);
+// by reference (all objects (including functions))
+var c = { greeting: 'hi' };
+var d;
+
+d = c;
+c.greeting = 'hello'; // mutate
+
+console.log(c);
+console.log(d);
+
+// by reference (even as parameters)
+function changeGreeting(obj) {
+    obj.greeting = 'Hola'; // mutate   
+}
+
+changeGreeting(d);
+console.log(c);
+console.log(d);
+
+// equals operator sets up new memory space (new address)
+c = { greeting: 'howdy' };
+console.log(c);
+console.log(d);
