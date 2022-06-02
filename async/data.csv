@@ -1,0 +1,6 @@
+id,store_brand,store_number,store_name,address,city,state,zip_code,phone_number,latitude,longitude,store_type
+1,The Home Depot,0470,CHANDLER,1155 W CHANDLER BLVD,CHANDLER,AZ,85224,480-899-5013,,,Retailer
+2,The Home Depot,0471,GILBERT,745 S VAL VISTA DR,GILBERT,AZ,85296,480-497-1466,,,Retailer
+3,The Home Depot,0472,N SCOTTSDALE,15499 N HAYDEN RD,SCOTTSDALE,AZ,85260,480-991-3738,,,Retailer
+4,The Home Depot,0473,NORTH MESA,425 S VAL VISTA DR,MESA,AZ,85204,480-396-0227,,,Retailer
+5,The Home Depot,0475,ARROWHEAD RANCH,6160 W BEHREND DR,GLENDALE,AZ,85308,623-376-0278,,,Retailer
