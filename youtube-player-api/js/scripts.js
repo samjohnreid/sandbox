@@ -1,30 +1,33 @@
-var tag = document.createElement('script');
+console.log('hi sam!');
 
+var tag = document.createElement('script');
 tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 var player;
-function onYouTubeIframeAPIReady() {
-    player = new YT.Player('player', {
-        height: '390',
-        width: '640',
-        videoId: 'M7lc1UVf-VE',
-        playerVars: {
-        'playsinline': 1
-        },
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('realmax-iframe', {
         events: {
-        'onReady': onPlayerReady,
+          'onReady': onPlayerReady,
         }
     });
-}
+  }
+  function onPlayerReady(event) {
+    document.getElementById('existing-iframe-example').style.borderColor = '#FF0000';
+    document.getElementById('existing-iframe-example').style.borderWidth = '20px';
+    console.log('hello?');
+  }
 
-function onPlayerReady(event) {
-    event.target.playVideo();
-}
+    const btnRestart = document.getElementById('btnRestart');
+    btnRestart.addEventListener('click', () => {
+        player.seekTo(0);
+    });
 
-const playButton = document.getElementById('vidButton');
+    const btnUnmute = document.getElementById('btnUnmute');
+    btnUnmute.addEventListener('click', () => {
+        player.unMute();
+    });
 
-playButton.addEventListener('click', () => {
-    player.playVideo();
-});
+
+

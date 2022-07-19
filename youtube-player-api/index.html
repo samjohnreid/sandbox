@@ -9,9 +9,23 @@
 
 <body>
   
-  <div id="player"></div>
+  <div class="shogun-video shogun-video-16x9">
+    <iframe id="realmax-iframe"
+      class="shogun-video-embed shogun-lazyloaded"
+      allow="autoplay"
+      src="https://www.youtube.com/embed/bfctwig1HUQ?enablejsapi=1&start=0&end=0&autoplay=1&loop=1&mute=1&playlist=bfctwig1HUQ&version=3&rel=0"
+      height="100%"
+      width="100%"
+      frameborder="0"
+    ></iframe>
+  </div>
 
-  <button id="vidButton">Click to play!</button>
+  <hr />
+
+  <div>
+    <button id="btnRestart">Click me to play from beginning!</button>
+    <button id="btnUnmute">Click me to unmute!</button>
+  </div>
 
   <script src="js/scripts.js"></script>
 </body>
