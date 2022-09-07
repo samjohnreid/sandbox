@@ -1,13 +1,14 @@
-.accordion {
-  font-family: Helvetica; }
-  .accordion__summary {
-    background: #067BC2;
-    border-bottom: 1px solid #fff;
-    color: #fff;
-    cursor: pointer;
-    font-weight: bold;
-    list-style: #fff;
-    padding: 20px; }
-  .accordion__content {
-    background: #84BCDA;
-    padding: 25px; }
+.wrapper {
+  background: red;
+  width: 800px;
+  container-type: inline-size;
+  container-name: card; }
+
+.card {
+  background: green;
+  margin: 0 auto;
+  width: 200px; }
+
+@container card (min-width: 400px) {
+  .card {
+    background: yellow; } }
