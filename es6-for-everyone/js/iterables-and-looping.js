@@ -12,9 +12,19 @@ const bugsnax = [
 
 console.log(bugsnax);
 
-for (const bugsnack of bugsnax) {
+for (const [i, bugsnack] of bugsnax.entries()) {
     if (bugsnack === 'Fryder') {
         continue;
     }
-    console.log(bugsnack);
+    console.log(`${bugsnack} is the ${i} item!`);
 }
+
+const ps = document.querySelectorAll('p');
+
+for (const paragraph of ps) {
+    paragraph.addEventListener('click', (item) => {
+        alert(item.target.innerText);
+    });
+}
+
+console.log(ps);
