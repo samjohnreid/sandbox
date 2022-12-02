@@ -28,3 +28,17 @@ for (const paragraph of ps) {
 }
 
 console.log(ps);
+
+const apple = {
+    color: 'Red',
+    size: 'Medium',
+    weight: 50,
+    sugar: 10,
+    type: 'Honeycrisp',
+};
+
+console.log(apple);
+
+for (const item of Object.entries(apple)) {
+    console.log(`${item[0]}: ${item[1]}`);
+}
