@@ -33,4 +33,30 @@ const newWordArray = wordArray.map((letter) => {
 
 wordContainer.innerHTML = newWordArray;
 
-console.log('newWordArray', newWordArray);
+// ----------------------------------------------
+
+const people = Array.from(document.querySelectorAll('.people p'));
+
+console.log('people: ', people);
+
+const names = people.map(person => person.innerText);
+
+console.log('names: ', names);
+
+const comments = [
+    { id: 209384, text: 'I love your dog!' },
+    { id: 523423, text: 'Cuuute! 🐐' },
+    { id: 632429, text: 'You are so dumb' },
+    { id: 192834, text: 'Nice work on this wes!' },
+];
+const id = 632429;
+
+const commentIndex = comments.findIndex((comment) => {
+    return comment.id === id;
+});
+
+console.log('commentIndex: ', commentIndex);
+
+const newComments = [...comments.slice(0, commentIndex), ...comments.slice(commentIndex + 1)];
+
+console.log('newComments: ', newComments);
