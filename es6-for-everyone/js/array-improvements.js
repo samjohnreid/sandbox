@@ -105,3 +105,18 @@ const fighterIndex = pokemon.findIndex(item => item.name === 'pidgeotto');
 console.log('fighter: ', fighter);
 
 console.log('fighterIndex: ', fighterIndex);
+
+const ages = [32, 15, 19, 12];
+
+const adultPresent = ages.some((age) => {
+    return age >= 18;
+});
+
+console.log('ages: ', ages);
+console.log('adultPresent: ', adultPresent);
+
+const allOldEnough = ages.every((age) => {
+    return age >= 18;
+});
+
+console.log('allOldEnough: ', allOldEnough);
