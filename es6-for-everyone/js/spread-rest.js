@@ -60,3 +60,20 @@ console.log('commentIndex: ', commentIndex);
 const newComments = [...comments.slice(0, commentIndex), ...comments.slice(commentIndex + 1)];
 
 console.log('newComments: ', newComments);
+
+console.log('// ----------------------------------------------');
+
+const inventors = ['Einstein', 'Newton', 'Galileo'];
+const newInventors = ['Musk', 'Jobs'];
+
+inventors.push(...newInventors);
+
+console.log('inventors: ', inventors);
+
+const namex = ['Sam', 'Reid'];
+
+function sayHi(first, last) {
+    alert(`Hey there, ${first} ${last}!`);
+}
+
+sayHi(...namex);
