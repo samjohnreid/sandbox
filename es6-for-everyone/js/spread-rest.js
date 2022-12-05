@@ -73,7 +73,21 @@ console.log('inventors: ', inventors);
 const namex = ['Sam', 'Reid'];
 
 function sayHi(first, last) {
-    alert(`Hey there, ${first} ${last}!`);
+    console.log(`Hey there, ${first} ${last}!`);
 }
 
 sayHi(...namex);
+
+console.log('// ----------------------------------------------');
+
+function convertCurrency(rate, ...amounts) {
+    console.log('currency conversion: ', rate, amounts);
+}
+
+convertCurrency(1.54, 10, 23, 52, 1, 56);
+
+const runner = ['Sam Reid', 123, 5.5, 5, 3, 6, 35];
+
+const [namez, id2, ...runs] = runner;
+
+console.log('runner info: ', namez, id2, runs)
