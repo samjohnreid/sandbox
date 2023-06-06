@@ -28,3 +28,29 @@ newCharsFromIvanhoe[0] = 'Wilfred';
 console.log('newCharsFromIvanhoe:', newCharsFromIvanhoe);
 
 console.log('charsFromIvanhoe:', charsFromIvanhoe);
+
+// ----------------------------------------------------------------------
+
+/*
+Rest is opposite of spread
+Spread takes a collection of items and unpacks it
+Rest takes multiple things and packs it into a single array
+*/
+
+// can be used to grab the "rest" of items of an array, for example when destructuring:
+
+const charsFromIvanhoe2 = [
+    'Ivanhoe',
+    'Cedric',
+    'Locksley',
+    'Brian de Bois-Guilbert',
+    'Maurice De Bracy',
+    'Reginald Front-de-Boeuf'
+];
+
+const [hero, father, yeoman, ...baddies] = charsFromIvanhoe2;
+
+console.log('hero:', hero);
+console.log('father:', father);
+console.log('yeoman:', yeoman);
+console.log('baddies:', baddies);
