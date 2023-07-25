@@ -118,3 +118,41 @@ const bonesy = new Pup('Bonesy', 'Shih Tzu');
 bonesy.eat('poo');
 
 console.log('bonesy:', bonesy);
+
+// ****************************************************************************************************
+
+// Extending Arrays with Classes for Custom Collections
+
+class MovieCollection extends Array {
+
+    constructor(name, ...items) { // first capture the items with a rest...
+        super(...items); // then spread them in with a spread
+        this.name = name;
+        console.log('name:', name);
+        console.log('items:', items);
+    }
+
+    add(movie) {
+        this.push(movie);
+    }
+
+    topRated(limit = 3) {
+        return this.sort((a, b) => (a.stars > b.stars ? -1 : 1)).slice(0, limit);
+    }
+
+}
+
+const movies = new MovieCollection(
+    `Sam's Favorite Movies`,
+    { name: `Blade Runner`, stars: 5 },
+    { name: `In the Mood for Love`, stars: 5 },
+    { name: `Goodfellas`, stars: 5 },
+    { name: `Lost in Translation`, stars: 5 },
+    { name: `Miller's Crossing`, stars: 5 }
+);
+
+movies.add({name: 'Titanic', stars: 4});
+
+console.log('movies:', movies);
+
+console.table(movies.topRated());
