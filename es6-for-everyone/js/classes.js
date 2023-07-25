@@ -63,3 +63,58 @@ console.log('binley.description:', binley.description);
 
 archer.nicknames = '         Kokie      ';
 console.log('archer.nicknames():', archer.nicknames);
+
+class Animal {
+
+    constructor(name) {
+        this.name = name;
+        this.thirst = 100;
+        this.belly = [];
+    }
+
+    drink() {
+        this.thirst -= 10;
+        return this.thirst;
+    }
+
+    eat(food) {
+        this.belly.push(food);
+        return this.belly;
+    }
+
+}
+
+const rhino = new Animal('Rhiney');
+
+console.log('rhino:', rhino);
+
+rhino.eat('Burger');
+rhino.eat('Leaves');
+rhino.eat('Zebra');
+
+rhino.drink();
+rhino.drink();
+rhino.drink();
+
+console.log('rhino after messing with the methods:', rhino);
+
+// now to *extend* the class!
+class Pup extends Animal {
+
+    constructor(name, breed) {
+        // super! call the thing that we're extending first
+        super(name);
+        this.breed = breed;
+    }
+
+    bark() {
+        console.log(`Bark bark I'm a dog!`);
+    }
+
+}
+
+const bonesy = new Pup('Bonesy', 'Shih Tzu');
+
+bonesy.eat('poo');
+
+console.log('bonesy:', bonesy);
