@@ -103,15 +103,15 @@ function breathe2(amount) {
     });
 }
 
-async function go() {
-    console.log('start');
+async function go(name, last) {
+    console.log(`Starting for ${name} ${last}!!!`);
     const res = await breathe2(1000);
     console.log('res:', res);
     const res2 = await breathe2(500);
     console.log('res2:', res2);
     const res3 = await breathe2(800);
     console.log('res3:', res3);
-    const res4 = await breathe2(700);
+    const res4 = await breathe2(400);
     console.log('res4:', res4);
     const res5 = await breathe2(500);
     console.log('res5:', res5);
@@ -141,27 +141,77 @@ async function samsPromiseAsyncAwait() {
 
 samsPromiseAsyncAwait();
 
+// --------------------------------------------------
 
+function catchErrors(fn) {
+    return function(...args) {
+        return fn(...args).catch((err) => {
+            console.error('Whoopsie!', err );
+        });
+    }
+}
 
+const wrappedFunction = catchErrors(go);
 
+wrappedFunction('Sam', 'Reid');
 
+// --------------------------------------------------
 
+async function go2() {
+    const p1 = fetch('https://api.github.com/users/samjohnreid');
+    const p2 = fetch('https://api.github.com/users/wesbos');
+    
+    // wait for both of them to come back
 
+    const res = await Promise.all([p1, p2]);
+    console.log('Promise.all res:', res);
 
+    const dataPromises = res.map((r) => {
+        return r.json();
+    });
 
+    const [sam, wes] = await Promise.all(dataPromises);
 
+    console.log('githubData:', sam, wes);
+}
 
+go2();
 
+// --------------------------------------------------
 
+async function getData(names) {
+    const promises = names.map((name) => {
+        return fetch(`https://api.github.com/users/${name}`).then((r) => {
+            return r.json();
+        });
+    });
 
+    const [sam, wes, dmitri] = await Promise.all(promises);
+    // can also use Promise.race which will resolve when the very first one comes back, and so will only return that one
 
+    console.log('sam, wes, dmitri:', sam, wes, dmitri);
+}
 
+getData(['samjohnreid', 'wesbos', 'panzerdp']);
 
+// --------------------------------------------------
 
+const whoa = navigator.geolocation.getCurrentPosition(
+    function(pos) { console.log('it worked!', pos) },
+    function(err) { console.log('it failed :(', err) },
+);
 
+function getCurrentPosition() {
+    return new Promise((resolve, reject) => {
+        navigator.geolocation.getCurrentPosition(resolve, reject);
+    });
+}
 
+async function go3() {
+    console.log('go3 starting');
+    const pos = await getCurrentPosition();
+    console.log('pos:', pos);
+    console.log('go3 finished');
+}
 
-
-
-
-
+go3();
