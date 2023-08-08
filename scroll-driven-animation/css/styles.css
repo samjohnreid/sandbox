@@ -1,0 +1,22 @@
+/*
+    New stuff!
+    - animation-timeline
+    - scroll-timeline
+    - timeline-scope
+*/
+.scroll-to-top {
+  animation: revealScroller ease-out;
+  animation-timeline: scroll(root);
+  bottom: 100px;
+  position: fixed;
+  right: 100px; }
+
+@keyframes revealScroller {
+  0%,
+  30% {
+    opacity: 0;
+    transform: translateY(100%); }
+  38%,
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
