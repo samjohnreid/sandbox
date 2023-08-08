@@ -5,6 +5,10 @@
     - timeline-scope
 */
 
+body {
+    padding-top: 50px;
+}
+
 .scroll-to-top {
     animation: revealScroller ease-out;
     animation-timeline: scroll(root);
@@ -23,5 +27,29 @@
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+// --------------------------------------------------
+
+.progress-bar {
+    animation: progressScroller linear;
+    animation-timeline: scroll(root);
+    background: red;
+    height: 20px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    width: 100%;
+}
+
+@keyframes progressScroller {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
     }
 }
