@@ -70,6 +70,9 @@ body {
       right: unset;
       transform-origin: bottom; }
 
+.scroll-timeline-wrapping-parent {
+  timeline-scope: --random-box-02__timeline; }
+
 .random-box-02 {
   border-bottom: 3px solid black;
   left: 100px;
@@ -86,7 +89,9 @@ body {
     list-style: none;
     margin: 0;
     overflow-y: scroll;
-    padding: 0; }
+    padding: 0;
+    scroll-timeline-axis: block;
+    scroll-timeline-name: --random-box-02__timeline; }
   .random-box-02 li {
     border-bottom: 3px dashed gray;
     padding: 30px; }
@@ -102,7 +107,17 @@ body {
     display: block;
     margin-bottom: 10px; }
   .random-box-03__inner {
-    background: red;
+    animation: moveBackground linear;
+    animation-timeline: --random-box-02__timeline;
+    background-image: url(../mario.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
     height: 100px;
     overflow-x: scroll;
     width: 100%; }
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: 100% 0; } }
