@@ -4,28 +4,20 @@ input {
   width: 50px; }
 
 .num-wrapper {
-  background: lightcyan;
   display: flex;
-  height: 150px; }
+  height: 150px;
+  overflow: hidden; }
 
 .num-column {
-  background: lightcoral;
   margin: 0 10px;
-  transition: all 0.5s; }
+  transition: transform 2s ease; }
 
 .num {
   align-items: center;
-  background: lightgray;
   display: flex;
   font-family: sans-serif;
-  font-size: 50px;
+  font-size: 130px;
   font-weight: bold;
   height: 150px;
   justify-content: center;
   width: 150px; }
-  .num:nth-child(odd) {
-    background: #e5e5e5; }
-
-.num-column--update-pos,
-.num-column--1 {
-  transition: all 0.5s; }
