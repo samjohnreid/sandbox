@@ -1,1 +1,23 @@
-// sandbox styles
+.num-wrapper {
+    background: lightcyan;
+    display: flex;
+    height: 50px;
+}
+
+.num-column {
+    background: lightcoral;
+    margin: 0 10px;
+}
+
+.num {
+    align-items: center;
+    background: lightgray;
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    width: 50px;
+
+    &:nth-child(odd) {
+        background: #e5e5e5;
+    }
+}
