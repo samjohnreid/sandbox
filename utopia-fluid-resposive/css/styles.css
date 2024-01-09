@@ -9,6 +9,29 @@
   --step-4: clamp(1.8144rem, 1.5426rem + 1.1595vw, 2.4413rem);
   --step-5: clamp(2.1775rem, 1.7984rem + 1.6173vw, 3.0519rem); }
 
+/* @link https://utopia.fyi/space/calculator?c=375,14,1.2,1240,16,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+:root {
+  --space-3xs: clamp(0.25rem, 0.25rem + 0vw, 0.25rem);
+  --space-2xs: clamp(0.4375rem, 0.4104rem + 0.1156vw, 0.5rem);
+  --space-xs: clamp(0.6875rem, 0.6604rem + 0.1156vw, 0.75rem);
+  --space-s: clamp(0.875rem, 0.8208rem + 0.2312vw, 1rem);
+  --space-m: clamp(1.3125rem, 1.2312rem + 0.3468vw, 1.5rem);
+  --space-l: clamp(1.75rem, 1.6416rem + 0.4624vw, 2rem);
+  --space-xl: clamp(2.625rem, 2.4624rem + 0.6936vw, 3rem);
+  --space-2xl: clamp(3.5rem, 3.2832rem + 0.9249vw, 4rem);
+  --space-3xl: clamp(5.25rem, 4.9249rem + 1.3873vw, 6rem);
+  /* One-up pairs */
+  --space-3xs-2xs: clamp(0.25rem, 0.1416rem + 0.4624vw, 0.5rem);
+  --space-2xs-xs: clamp(0.4375rem, 0.302rem + 0.578vw, 0.75rem);
+  --space-xs-s: clamp(0.6875rem, 0.552rem + 0.578vw, 1rem);
+  --space-s-m: clamp(0.875rem, 0.604rem + 1.1561vw, 1.5rem);
+  --space-m-l: clamp(1.3125rem, 1.0145rem + 1.2717vw, 2rem);
+  --space-l-xl: clamp(1.75rem, 1.2081rem + 2.3121vw, 3rem);
+  --space-xl-2xl: clamp(2.625rem, 2.0289rem + 2.5434vw, 4rem);
+  --space-2xl-3xl: clamp(3.5rem, 2.4162rem + 4.6243vw, 6rem);
+  /* Custom pairs */
+  --space-s-l: clamp(0.875rem, 0.3873rem + 2.0809vw, 2rem); }
+
 body {
   margin: 0; }
 
@@ -20,19 +43,24 @@ body {
   padding: 50px; }
   .copy h1 {
     margin: 0;
-    font-size: var(--step-5); }
+    font-size: var(--step-5);
+    margin-bottom: var(--space-2xl-3xl); }
   .copy h2 {
     margin: 0;
-    font-size: var(--step-4); }
+    font-size: var(--step-4);
+    margin-bottom: var(--space-2xl); }
   .copy h3 {
     margin: 0;
-    font-size: var(--step-3); }
+    font-size: var(--step-3);
+    margin-bottom: var(--space-xl); }
   .copy h4 {
     margin: 0;
-    font-size: var(--step-2); }
+    font-size: var(--step-2);
+    margin-bottom: var(--space-l); }
   .copy p {
     margin: 0;
-    font-size: var(--step-0); }
+    font-size: var(--step-0);
+    margin-bottom: var(--space-m); }
   .copy small {
     margin: 0;
     font-size: var(--step--1); }
