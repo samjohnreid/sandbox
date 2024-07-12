@@ -1,1 +1,46 @@
-// sandbox styles
+body {
+	margin: 0;
+	padding: 50px 100px;
+}
+
+hr {
+	margin-bottom: 50px;
+}
+
+.vps {
+	border: 5px dashed gray;
+	display: flex;
+	height: 550px;
+	width: fit-content;
+}
+
+.vps__scrollbar {
+	align-content: center;
+	border: 5px dashed red;
+	margin-right: 30px;
+}
+
+.vps__content {
+	border: 5px dashed orange;
+	margin-right: 30px;
+	width: 350px;
+}
+
+.vps__content-eyebrow {
+	border: 5px dashed yellow;
+	margin-bottom: 15px;
+}
+
+.vps__content-scroll-area {
+	border: 5px dashed green;
+}
+
+.vps__image {
+	align-content: center;
+	border: 5px dashed blue;
+
+	img {
+		display: block;
+		height: 540px;
+	}
+}
