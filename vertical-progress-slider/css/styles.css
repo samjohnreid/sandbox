@@ -1,4 +1,5 @@
 body {
+  height: 3000px;
   margin: 0;
   padding: 50px 100px; }
 
@@ -8,17 +9,35 @@ hr {
 .vps {
   border: 5px dashed gray;
   display: flex;
-  height: 550px;
+  height: 600px;
   width: fit-content; }
 
-.vps__scrollbar {
+.vps__scrollbar-container {
   align-content: center;
   border: 5px dashed red;
-  margin-right: 30px; }
+  margin-right: 30px;
+  padding: 0 50px; }
+
+.vps__scrollbar-track {
+  background: lightgray;
+  height: 300px;
+  position: relative;
+  width: 10px; }
+
+.vps__scrollbar {
+  background: green;
+  height: 0;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 10px; }
 
 .vps__content {
   border: 5px dashed orange;
+  display: flex;
+  flex-direction: column;
   margin-right: 30px;
+  padding: 50px 0;
   width: 350px; }
 
 .vps__content-eyebrow {
@@ -26,11 +45,12 @@ hr {
   margin-bottom: 15px; }
 
 .vps__content-scroll-area {
-  border: 5px dashed green; }
+  background: lightblue;
+  overflow: scroll; }
 
 .vps__image {
   align-content: center;
   border: 5px dashed blue; }
   .vps__image img {
     display: block;
-    height: 540px; }
+    height: 100%; }
