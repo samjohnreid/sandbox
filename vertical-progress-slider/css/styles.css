@@ -46,7 +46,10 @@ hr {
 
 .vps__content-scroll-area {
   background: lightblue;
-  overflow: scroll; }
+  overflow: scroll;
+  scrollbar-width: none; }
+  .vps__content-scroll-area::-webkit-scrollbar {
+    display: none; }
 
 .vps__image {
   align-content: center;

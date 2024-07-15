@@ -55,6 +55,11 @@ hr {
 .vps__content-scroll-area {
 	background: lightblue;
 	overflow: scroll;
+	scrollbar-width: none;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
 }
 
 .vps__image {
