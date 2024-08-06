@@ -1,13 +1,5 @@
-.accordion {
-  font-family: Helvetica; }
-  .accordion__summary {
-    background: #067BC2;
-    border-bottom: 1px solid #fff;
-    color: #fff;
-    cursor: pointer;
-    font-weight: bold;
-    list-style: #fff;
-    padding: 20px; }
-  .accordion__content {
-    background: #84BCDA;
-    padding: 25px; }
+body {
+  margin: 50px; }
+
+.button-1 {
+  border: 5px dashed red; }
