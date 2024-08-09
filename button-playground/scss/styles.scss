@@ -1,7 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
 	margin: 50px;
 }
 
+.button {
+	cursor: pointer;
+	font-family: "Overpass", sans-serif;
+	font-optical-sizing: auto;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+}
+
 .button-1 {
-	border: 5px dashed red;
+	align-items: center;
+	background: #28724F;
+	border-radius: 6px;
+	color: #fff;
+	column-gap: 12px;
+	display: flex;
+	line-height: 16px;
+	padding: 6px 6px 6px 18px;
+	width: fit-content;
+
+	&::after {
+		content: url(/img/btn-arrow-light.svg);
+		line-height: 0;
+	}
 }
