@@ -4,6 +4,10 @@ body {
 	margin: 50px;
 }
 
+hr {
+	margin: 50px 0;
+}
+
 .button {
 	cursor: pointer;
 	font-family: "Overpass", sans-serif;
@@ -24,8 +28,23 @@ body {
 	padding: 6px 6px 6px 18px;
 	width: fit-content;
 
-	&::after {
-		content: url(/img/btn-arrow-light.svg);
-		line-height: 0;
+	span {
+		position: relative;
+		top: 2px;
+	}
+
+	.icon-wrapper {
+		background: #fff;
+		border-radius: 4px;
+		align-items: center;
+		display: flex;
+		height: 32px;
+		justify-content: center;
+		width: 32px;
+	}
+	
+	svg {
+		display: block;
+		fill: #28724F;
 	}
 }
