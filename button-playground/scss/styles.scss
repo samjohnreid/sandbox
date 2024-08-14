@@ -47,4 +47,26 @@ hr {
 		display: block;
 		fill: #28724F;
 	}
+
+	&.button-test-in {
+		animation-duration: 1000ms;
+		animation-fill-mode: forwards;
+		animation-name: button-test-in;
+	}
+
+	&.button-test-out {
+		animation-duration: 1000ms;
+		animation-fill-mode: forwards;
+		animation-name: button-test-out;
+	}
+}
+
+@keyframes button-test-in {
+	from { transform: translateX(0); }
+	to { transform: translateX(50px); }
+}
+
+@keyframes button-test-out {
+	from { transform: translateX(50px); }
+	to { transform: translateX(0); }
 }
