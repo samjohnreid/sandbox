@@ -1,59 +1,89 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
 body {
+  background: #d0d0d0;
   margin: 50px; }
 
 hr {
   margin: 50px 0; }
 
-.button {
-  cursor: pointer;
-  font-family: "Overpass", sans-serif;
-  font-optical-sizing: auto;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400; }
-
 .button-1 {
   align-items: center;
   background: #28724F;
   border-radius: 6px;
-  color: #fff;
   column-gap: 12px;
+  cursor: pointer;
   display: flex;
-  line-height: 16px;
-  padding: 6px 6px 6px 18px;
+  font-family: "Overpass", sans-serif;
+  font-size: 16px;
+  overflow: hidden;
+  padding: 6px 6px 6px 0;
   width: fit-content; }
   .button-1 span {
+    color: #fff;
+    left: 0;
+    padding-left: 18px;
     position: relative;
-    top: 2px; }
+    top: 2px;
+    transition: all 500ms ease 50ms;
+    z-index: 1; }
   .button-1 .icon-wrapper {
-    background: #fff;
-    border-radius: 4px;
     align-items: center;
     display: flex;
     height: 32px;
     justify-content: center;
+    position: relative;
     width: 32px; }
-  .button-1 svg {
-    display: block;
-    fill: #28724F; }
-  .button-1.button-test-in {
-    animation-duration: 1000ms;
-    animation-fill-mode: forwards;
-    animation-name: button-test-in; }
-  .button-1.button-test-out {
-    animation-duration: 1000ms;
-    animation-fill-mode: forwards;
-    animation-name: button-test-out; }
+    .button-1 .icon-wrapper::before {
+      background: #fff;
+      border-radius: 4px;
+      content: '';
+      height: 100%;
+      position: absolute;
+      width: 100%; }
+    .button-1 .icon-wrapper svg {
+      display: block;
+      fill: #28724F;
+      position: relative;
+      right: 0;
+      transition: right 500ms ease 50ms; }
+  .button-1:hover span {
+    color: #28724F;
+    left: 5px; }
+  .button-1:hover .icon-wrapper svg {
+    right: 5px; }
 
-@keyframes button-test-in {
+@keyframes icon-wrapper-expand {
   from {
-    transform: translateX(0); }
+    height: 32px;
+    width: 32px; }
   to {
-    transform: translateX(50px); } }
+    height: 268.21px;
+    width: 268.21px; } }
 
-@keyframes button-test-out {
+@keyframes icon-wrapper-contract {
   from {
-    transform: translateX(50px); }
+    height: 268.21px;
+    width: 268.21px; }
   to {
-    transform: translateX(0); } }
+    height: 32px;
+    width: 32px; } }
+
+@keyframes icon-wrapper-contract-2 {
+  0% {
+    height: 32px;
+    width: 32px; }
+  50% {
+    height: 22px;
+    width: 22px; }
+  100% {
+    height: 32px;
+    width: 32px; } }
+
+.button-1.button-test-in .icon-wrapper::before {
+  animation-duration: 250ms;
+  animation-fill-mode: forwards;
+  animation-name: icon-wrapper-expand;
+  animation-timing-function: ease-in-out; }
+
+.button-1.button-test-out .icon-wrapper::before {
+  animation: icon-wrapper-contract 250ms ease-in-out, icon-wrapper-contract-2 400ms ease-out 250ms; }
