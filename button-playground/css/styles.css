@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --btn-width: 0; }
+
 body {
   background: #d0d0d0;
   margin: 50px; }
@@ -57,18 +60,18 @@ hr {
     height: 32px;
     width: 32px; }
   to {
-    height: 268.21px;
-    width: 268.21px; } }
+    height: var(--btn-width);
+    width: var(--btn-width); } }
 
 @keyframes icon-wrapper-contract {
   from {
-    height: 268.21px;
-    width: 268.21px; }
+    height: var(--btn-width);
+    width: var(--btn-width); }
   to {
     height: 32px;
     width: 32px; } }
 
-@keyframes icon-wrapper-contract-2 {
+@keyframes icon-wrapper-bounce {
   0% {
     height: 32px;
     width: 32px; }
@@ -86,4 +89,4 @@ hr {
   animation-timing-function: ease-in-out; }
 
 .button-1.button-test-out .icon-wrapper::before {
-  animation: icon-wrapper-contract 250ms ease-in-out, icon-wrapper-contract-2 400ms ease-out 250ms; }
+  animation: icon-wrapper-contract 250ms ease-in-out, icon-wrapper-bounce 400ms ease-out 250ms; }
