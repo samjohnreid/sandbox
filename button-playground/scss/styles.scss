@@ -13,27 +13,24 @@ hr {
 	margin: 50px 0;
 }
 
-.button-1 {
+// **************************************************
+
+.button {
 	align-items: center;
-	background: #28724F;
+	background: transparent;
 	border-radius: 6px;
 	column-gap: 12px;
 	cursor: pointer;
 	display: flex;
-	font-family: "Overpass", sans-serif;
+	font-family: 'Overpass', sans-serif;
 	font-size: 16px;
-	overflow: hidden;
-	padding: 6px 6px 6px 0;
+	transition: background 500ms;
 	width: fit-content;
 
 	span {
-		color: #fff;
-		left: 0;
-		padding-left: 18px;
+		color: #000;
 		position: relative;
 		top: 2px;
-		transition: all 500ms ease 50ms;
-		z-index: 1;
 	}
 
 	.icon-wrapper {
@@ -45,24 +42,73 @@ hr {
 		width: 32px;
 
 		&::before {
-			background: #fff;
+			background: #28724F;
 			border-radius: 4px;
 			content: '';
 			height: 100%;
 			position: absolute;
+			transition: background 750ms;
 			width: 100%;
 		}
 
 		svg {
 			display: block;
-			fill: #28724F;
+			fill: #fff;
 			position: relative;
+			transition: fill 750ms;
+		}
+	}
+
+	&:hover {
+		background: #28724F;
+
+		span {
+			color: #fff;
+		}
+
+		.icon-wrapper {
+
+			&::before {
+				background: #fff;
+			}
+
+			svg {
+				fill: #28724F;
+			}
+		}
+	}
+}
+
+// **************************************************
+
+.button-1 {
+	background: #28724F;
+	overflow: hidden;
+	padding: 6px 6px 6px 0;
+
+	span {
+		color: #fff;
+		left: 0;
+		padding-left: 18px;
+		transition: all 500ms ease 50ms;
+		z-index: 1;
+	}
+
+	.icon-wrapper {
+
+		&::before {
+			background: #fff;
+		}
+
+		svg {
+			fill: #28724F;
 			right: 0;
 			transition: right 500ms ease 50ms;
 		}
 	}
 
 	&:hover {
+		background: #28724F;
 
 		span {
 			color: #28724F;
@@ -115,5 +161,73 @@ hr {
 			icon-wrapper-contract 250ms ease-in-out,
 			icon-wrapper-bounce 400ms ease-out 250ms
 		;
+	}
+}
+
+// **************************************************
+
+.button-2 {
+	padding: 6px 24px 6px 0;
+
+	.icon-wrapper {
+		z-index: 1;
+	}
+}
+
+// **************************************************
+
+@keyframes icon-wrapper-slide-in {
+	0% { transform: translateX(0); }
+	50% { transform: translateX(calc(var(--btn-width) + 3px)); }
+	100% { transform: translateX(var(--btn-width)); }
+}
+
+@keyframes text-slide-in {
+	0% { transform: translateX(0); }
+	50% { transform: translateX(-29px); }
+	100% { transform: translateX(-26px); }
+}
+
+@keyframes icon-wrapper-slide-out {
+	0% { transform: translateX(var(--btn-width)); }
+	50% { transform: translateX(-3px); }
+	100% { transform: translateX(0); }
+}
+
+@keyframes text-slide-out {
+	0% { transform: translateX(-26px); }
+	50% { transform: translateX(3px); }
+	100% { transform: translateX(0); }
+}
+
+// **************************************************
+
+.button-2.button-test-in {
+	
+	.icon-wrapper {
+		animation-duration: 750ms;
+		animation-fill-mode: forwards;
+		animation-name: icon-wrapper-slide-in;
+	}
+
+	& > span {
+		animation-duration: 750ms;
+		animation-fill-mode: forwards;
+		animation-name: text-slide-in;
+	}
+}
+
+.button-2.button-test-out {
+	
+	.icon-wrapper {
+		animation-duration: 750ms;
+		animation-fill-mode: forwards;
+		animation-name: icon-wrapper-slide-out;
+	}
+
+	& > span {
+		animation-duration: 750ms;
+		animation-fill-mode: forwards;
+		animation-name: text-slide-out;
 	}
 }
